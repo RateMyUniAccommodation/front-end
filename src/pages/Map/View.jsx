@@ -1,11 +1,12 @@
+import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
-import '../style/View.css'
+import styles from "./View.module.css";
 
-export default function View() {
+const View = () => {
   return (
-  <>
+  <div>
     <h1>View</h1>
-    <MapContainer className='map' center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
+    <MapContainer className={styles.map} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -16,6 +17,8 @@ export default function View() {
         </Popup>
       </Marker> */}
     </MapContainer>
-  </>
+  </div>
   );
 }
+
+export default View;

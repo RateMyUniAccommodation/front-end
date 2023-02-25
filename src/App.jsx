@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Auth from "./pages/Auth/Auth";
 import Home from "./pages/Home/Home";
 import View from "./pages/Map/View";
-import Error from "./pages/Error/Err";
+import Error from "./pages/Error/Error";
 
-export default function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -19,3 +19,5 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+export default App;
