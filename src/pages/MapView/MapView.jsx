@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
-import styles from "./View.module.css";
+import styles from "./MapView.module.css";
 
 const View = () => {
   return (
