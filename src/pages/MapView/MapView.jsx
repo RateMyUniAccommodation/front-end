@@ -2,10 +2,10 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import styles from "./MapView.module.css";
 
-const View = () => {
+const MapView = () => {
   return (
   <div>
-    <h1>View</h1>
+    <h1>MapView</h1>
     <MapContainer className={styles.map} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -21,4 +21,4 @@ const View = () => {
   );
 }
 
-export default View;
+export default MapView;
