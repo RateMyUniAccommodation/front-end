@@ -1,14 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Auth from "./pages/Auth/Auth";
+import Home from "./pages/Home/Home";
+import View from "./pages/MapView/MapView";
+import Error from "./pages/Error/Error";
+import Navbar from "./components/Navbar/Navbar";
 
-function App() {
-
+const App = () => {
   return (
-    <div>
-      <h1>Test</h1>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="view" element={<View />} />
+        <Route path="auth" element={<Auth />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
-
-export default App
+};
+export default App;
