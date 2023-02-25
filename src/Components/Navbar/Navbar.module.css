@@ -14,9 +14,21 @@
   width: 80%;
 }
 
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .navbarLogoTitle {
   font-size: 30px;
   font-weight: bold;
+}
+
+.navbarLogoIcon {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
 }
 
 .navbarMenu {

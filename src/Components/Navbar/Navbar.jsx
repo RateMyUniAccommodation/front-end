@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import { HomeIcon } from "@heroicons/react/24/solid";
+
 
 const Navbar = () => {
   const location = useLocation();
@@ -10,7 +12,8 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navbarContainer}>
         <Link to="/" className={styles.navbarLogo}>
-          <h1 className={styles.navbarTitle}>ratemyuniaccom</h1>
+          <HomeIcon className={styles.navbarLogoIcon} />
+          <h1 className={styles.navbarLogoTitle}>ratemyuniaccom</h1>
         </Link>
 
         {!isHomePage && (
