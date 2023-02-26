@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { HomeIcon } from "@heroicons/react/24/solid";
 import Navitem from "./Navitem";
+import SearchBar from "../UI/SearchBar/SearchBar";
 
 const Navbar = () => {
   const location = useLocation();
@@ -15,11 +16,7 @@ const Navbar = () => {
           <HomeIcon className={styles.navbarLogoIcon} />
           <h1 className={styles.navbarLogoTitle}>ratemyuniaccom</h1>
         </Link>
-        {!isHomePage && (
-          <form className={styles.navbarSearchForm}>
-            <input type="text" placeholder="Search..." />
-          </form>
-        )}
+        {!isHomePage && <SearchBar />}
         <ul className={styles.navbarMenu}>
           <Navitem link="about" title="About us" />
           <Navitem link="contact" title="Contact us" />

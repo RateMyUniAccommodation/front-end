@@ -56,10 +56,6 @@
   border: none;
 }
 
-.navbarSearchForm button:hover {
-  background-color: #14323f;
-}
-
 .navbarRight {
   display: flex;
   align-items: center;
