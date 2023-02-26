@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { HomeIcon } from "@heroicons/react/24/solid";
+import Navitem from "./Navitem";
 
 const Navbar = () => {
   const location = useLocation();
@@ -17,20 +18,11 @@ const Navbar = () => {
         {!isHomePage && (
           <form className={styles.navbarSearchForm}>
             <input type="text" placeholder="Search..." />
-            <button type="submit">Go</button>
           </form>
         )}
         <ul className={styles.navbarMenu}>
-          <li className={styles.navbarMenuItem}>
-            <Link to="/about" className={styles.navbarLink}>
-              About us
-            </Link>
-          </li>
-          <li className={styles.navbarMenuItem}>
-            <Link to="/contact" className={styles.navbarLink}>
-              Contact us
-            </Link>
-          </li>
+          <Navitem link="about" title="About us" />
+          <Navitem link="contact" title="Contact us" />
         </ul>
         <div className={styles.navbarRight}>
           <button className={styles.navbarButton}>Sign In</button>
