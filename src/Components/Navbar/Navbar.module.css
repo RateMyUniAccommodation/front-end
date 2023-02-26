@@ -5,6 +5,9 @@
   justify-content: center;
   align-items: center;
   padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* add shadow */
+  border-bottom-left-radius: 10px; /* add rounded edges at the bottom */
+  border-bottom-right-radius: 10px;
 }
 
 .navbarContainer {
