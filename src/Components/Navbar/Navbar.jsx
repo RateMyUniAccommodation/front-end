@@ -18,8 +18,8 @@ const Navbar = () => {
         </Link>
         {!isHomePage && <SearchBar />}
         <ul className={styles.navbarMenu}>
-          <Navitem link="about" title="About us" />
-          <Navitem link="contact" title="Contact us" />
+          <Navitem link="about" title="About" />
+          <Navitem link="contact" title="Contact" />
         </ul>
         <div className={styles.navbarRight}>
           <button className={styles.navbarButton}>Sign In</button>
