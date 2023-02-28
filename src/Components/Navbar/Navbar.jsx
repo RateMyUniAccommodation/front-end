@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { HomeIcon } from "@heroicons/react/24/solid";
 import Navitem from "./Navitem";
 import SearchBar from "../UI/SearchBar/SearchBar";
+import Button from "../UI/Button/Button"; 
 
 const Navbar = () => {
+  const [isLogin, setLogin] = useState(false);
+
   const location = useLocation();
   const isHomePage = location.pathname === "/home";
+  
+  const handleClick = () => {
+    setLogin((prevLogin) => !prevLogin);
+  }   
   
   return (
     <nav className={styles.navbar}>
@@ -22,7 +29,7 @@ const Navbar = () => {
           <Navitem link="contact" title="Contact" />
         </ul>
         <div className={styles.navbarRight}>
-          <button className={styles.navbarButton}>Sign In</button>
+          <Button onClick={handleClick} name={`${!isLogin ? 'Login' : 'Signed in'}`}/>
         </div>
       </div>
     </nav>
