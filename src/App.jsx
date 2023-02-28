@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Auth from "./pages/Auth/Auth";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <React.Fragment>
       <Navbar />
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
@@ -21,7 +21,7 @@ const App = () => {
         <Route path="auth" element={<Auth />} />
         <Route path="*" element={<Error />} />
       </Routes>
-    </BrowserRouter>
+    </React.Fragment>
   );
 };
 
