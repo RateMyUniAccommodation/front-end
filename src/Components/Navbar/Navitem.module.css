@@ -1,5 +1,5 @@
 .navbarLink {
-  color: #1c4966;
+  color: var(--blue);
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
@@ -8,6 +8,6 @@
 }
 
 .navbarLink:hover {
-  background-color: #1c4966;
+  background-color: var(--blue);
   color: white;
 }

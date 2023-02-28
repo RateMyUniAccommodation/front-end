@@ -19,4 +19,7 @@ a {
 }
 
 /* Add global styles here */
+:root {
+  --blue: #1c4966;
+}
 
