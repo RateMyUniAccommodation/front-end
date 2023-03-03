@@ -1,0 +1,15 @@
+.navbarButton {
+  background-color: #2e86c1;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbarButton:hover {
+  background-color: #23527c;
+}
