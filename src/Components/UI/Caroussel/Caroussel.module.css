@@ -1,0 +1,14 @@
+.embla {
+  overflow: hidden;
+  text-align: center;
+}
+.emblaContainer {
+  display: flex;
+  align-items: stretch; /* stretch items to fit height of container */
+}
+.emblaSlide {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center items horizontally */
+}
