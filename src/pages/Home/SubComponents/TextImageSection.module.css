@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content {
+  flex-basis: 100%;
+  padding: 0 20px;
+  max-width: 600px; /* set a max width for the text content */
+}
+
+.content h1 {
+  margin-top: 0;
+  margin-bottom: 20px; /* add some space below the heading */
+}
+
+.image {
+  flex-basis: 100%;
+  margin-top: 20px;
+  max-width: 400px; /* set a max width for the image */
+}
+
+image img {
+  max-width: 100%;
+  height: auto;
+}
