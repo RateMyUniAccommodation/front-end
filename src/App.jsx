@@ -7,7 +7,7 @@ import Contact from "./pages/Contact/Contact";
 import MapView from "./pages/MapView/MapView";
 import Error from "./pages/Error/Error";
 import Navbar from "./components/Navbar/Navbar";
-
+import Footer from "./Components/Footer/Footer";
 const App = () => {
   return (
     <React.Fragment>
@@ -21,6 +21,7 @@ const App = () => {
         <Route path="auth" element={<Auth />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </React.Fragment>
   );
 };

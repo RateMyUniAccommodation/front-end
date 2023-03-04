@@ -1,9 +1,9 @@
 .home {
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   gap: 2rem;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* Need to add this later */
