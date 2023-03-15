@@ -5,6 +5,7 @@
 .emblaContainer {
   display: flex;
   align-items: stretch; /* stretch items to fit height of container */
+  margin-bottom: 1rem;
 }
 .emblaSlide {
   flex: 0 0 100%;
