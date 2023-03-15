@@ -1,12 +1,20 @@
 import React, { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import styles from "./Caroussel.module.css";
 import Card from "../Card/Card";
 
 const Caroussel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
+  const autoPlayOptions = {
+    delay: 8000,
+    stopOnInteraction: false,
+    stopOnMouseEnter: true,
+  };
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [
+    Autoplay(autoPlayOptions),
+  ]);
   const imageArray = ["caroussel-image.jpg", "caroussel-image-two.jpg"];
-  //src/assets/images/caroussel-image-two.jpg
   useEffect(() => {
     if (emblaApi) {
       // Embla API is ready
