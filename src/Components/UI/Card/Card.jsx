@@ -1,20 +1,22 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styles from "./Card.module.css";
-import image from "../../../assets/images/caroussel-image.jpg";
 
-const Card = () => {
+const Card = (props) => {
+  const [imageSrc, setImageSrc] = useState(null);
+
+  useEffect(() => {
+    fetch(`/src/assets/images/${props.imageName}`)
+      .then((response) => response.blob())
+      .then((blob) => URL.createObjectURL(blob))
+      .then((url) => setImageSrc(url))
+      .catch((error) => console.error(error));
+  }, [props.imageName]);
   return (
     <div className={styles.card}>
-      <img className={styles.cardImage} src={image} alt="caroussel" />
+      <img className={styles.cardImage} src={imageSrc} alt={props.imageName} />
       <div className={styles.cardInfo}>
-        <h3>Clark and Alicia</h3>
-        <p>
-          This fully-furnished space features a comfortable queen-sized bed, a
-          fully-equipped kitchenette, and a cozy living area with a flat-screen
-          TV. You'll love the convenient location, just steps away from the
-          city's best restaurants, cafes, and shopping. Book your stay now and
-          make Bob and Alicia's apartment your home away from home!
-        </p>
+        <h3>{props.author}</h3>
+        <p>{props.description}</p>
       </div>
     </div>
   );
