@@ -33,8 +33,7 @@ const Caroussel = () => {
             author="Clementine"
             description="I had a great experience living in the university accommodation at Crown Place. 
             The rooms were spacious and clean, and the location was perfect for getting to classes and exploring the city. 
-            The staff were friendly and helpful, and there were plenty of social events organized for residents. 
-            Overall, I would highly recommend this accommodation to any student looking for a comfortable and convenient place to live."
+            The staff were friendly and helpful, and there were plenty of social events organized for residents."
           />
         </div>
       </div>
