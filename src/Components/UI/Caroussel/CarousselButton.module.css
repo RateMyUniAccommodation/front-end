@@ -11,9 +11,21 @@
 }
 
 .carouselButton:first-of-type {
-  left: 1.5rem;
+  left: 5rem;
+}
+.carouselButton:last-of-type {
+  right: 5rem;
 }
 
-.carouselButton:last-of-type {
-  right: 1.5rem;
+@media only screen and (max-width: 768px) {
+  .carouselButton {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+  .carouselButton:first-of-type {
+    left: 0;
+  }
+  .carouselButton:last-of-type {
+    right: 0;
+  }
 }
