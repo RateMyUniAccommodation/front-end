@@ -1,4 +1,5 @@
 .embla {
+  position: relative;
   overflow: hidden;
   text-align: center;
 }

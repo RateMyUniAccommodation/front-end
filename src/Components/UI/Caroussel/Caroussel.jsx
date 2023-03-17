@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import styles from "./Caroussel.module.css";
 import Card from "../Card/Card";
+import CarouselButton from "./CarousselButton";
 
 const Caroussel = () => {
   const autoPlayOptions = {
@@ -20,6 +21,15 @@ const Caroussel = () => {
       // Embla API is ready
     }
   }, [emblaApi]);
+
+    const handlePrevClick = useCallback(
+      () => emblaApi && emblaApi.scrollPrev(),
+      [emblaApi]
+    );
+    const handleNextClick = useCallback(
+      () => emblaApi && emblaApi.scrollNext(),
+      [emblaApi]
+    );
 
   return (
     <div className={styles.embla} ref={emblaRef}>
@@ -45,6 +55,7 @@ const Caroussel = () => {
           />
         </div>
       </div>
+      <CarouselButton prevClick={handlePrevClick} nextClick={handleNextClick} />
     </div>
   );
 };

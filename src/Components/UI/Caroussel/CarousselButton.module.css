@@ -1,0 +1,19 @@
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: black;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+}
+
+.carouselButton:first-of-type {
+  left: 1.5rem;
+}
+
+.carouselButton:last-of-type {
+  right: 1.5rem;
+}
