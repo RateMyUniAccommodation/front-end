@@ -10,10 +10,6 @@ const SearchBar = () => {
   const handleDropDownClick = () => {
     setDropDown(true);
   }
-  const handleInputBlur = () => {
-    setDropDown(false);
-  };
-
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (inputRef.current && !inputRef.current.contains(event.target)) {
