@@ -11,9 +11,9 @@ const Dropdown = () => {
   return (
     <div className={styles.dropdown}>
       <ul>
-        <li onMouseDown={handleClick}>University of Liverpool</li>
-        <li onMouseDown={handleClick}>University of Leeds</li>
-        <li onMouseDown={handleClick}>University of Manchester</li>
+        <li onClick={handleClick}>University of Liverpool</li>
+        <li onClick={handleClick}>University of Leeds</li>
+        <li onClick={handleClick}>University of Manchester</li>
         <li>University of Lancaster</li>
         <li>University of Exeter</li>
         <li>University of Cambridge</li>
