@@ -44,19 +44,6 @@
   flex-grow: 1;
 }
 
-.navbarSearchForm {
-  flex-grow: 1; /* grow to fill remaining space */
-  display: flex;
-  align-items: center;
-  justify-content: center; /* center items horizontally */
-}
-
-.navbarSearchForm input {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-}
-
 .navbarRight {
   display: flex;
   align-items: center;
