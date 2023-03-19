@@ -24,8 +24,6 @@ const SearchBar = () => {
     };
   }, [inputRef]);
 
-  console.log("SearchBar component created");
-
   return (
     <div className={styles.navbarSearchBar}>
       <div className={styles.searchContainer}>
