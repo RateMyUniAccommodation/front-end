@@ -1,5 +1,5 @@
 const fetchUniversities = async () => {
-  const response = await fetch("/src/mock-data/universities.json");
+  const response = await fetch("/universities.json");
   const universities = await response.json();
   return universities;
 };
