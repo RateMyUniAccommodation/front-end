@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import fetchUniversities from "../../../api/api";
+import { fetchUniversities } from "../../../api/api";
 import { useNavigate } from "react-router-dom";
 import styles from "./Dropdown.module.css";
 
