@@ -1,10 +1,10 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useState, useEffect, useMemo, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import styles from "./Caroussel.module.css";
 import Card from "../Card/Card";
 import CarouselButton from "./CarousselButton";
-import users from "../../../mock-data/users.json";
+import { fetchProfiles } from "../../../api/api";
 
 const Caroussel = () => {
   const autoPlayOptions = {
@@ -13,15 +13,24 @@ const Caroussel = () => {
     stopOnMouseEnter: true,
   };
 
+  const [profiles, setProfiles] = useState([]);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [
     Autoplay(autoPlayOptions),
   ]);
 
   useEffect(() => {
-    if (emblaApi) {
-      // Embla API is ready
-    }
-  }, [emblaApi]);
+    fetchProfiles().then((data) => {
+      setProfiles(data);
+    });
+  }, []);
+
+  const memoizedProfiles = useMemo(() => profiles.slice(0, 2), [profiles]);
+
+  useEffect(() => {
+    if (emblaApi && memoizedProfiles.length > 0) {
+      emblaApi.reInit();
+    };
+  }, [emblaApi, memoizedProfiles]);
 
   const handlePrevClick = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
@@ -35,7 +44,7 @@ const Caroussel = () => {
   return (
     <div className={styles.embla} ref={emblaRef}>
       <div className={styles.emblaContainer}>
-        {users.map((user) => (
+        {memoizedProfiles.map((user) => (
           <div className={styles.emblaSlide} key={user.id}>
             <Card
               imageName={user.image}
