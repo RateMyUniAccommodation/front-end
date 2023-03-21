@@ -3,7 +3,7 @@ import { fetchUniversities } from "../../../api/api";
 import { useNavigate } from "react-router-dom";
 import styles from "./Dropdown.module.css";
 
-const Dropdown = () => {
+const Dropdown = ({ inputValue }) => {
   const [universities, setUniversities] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
@@ -13,13 +13,20 @@ const Dropdown = () => {
     navigate(`/accommodation/${university}`);
   };
 
-useEffect(() => {
-  setIsLoading(true);
-  fetchUniversities().then((data) => {
-    setUniversities(data);
-    setIsLoading(false);
-  });
-}, []);
+  useEffect(() => {
+    setIsLoading(true);
+    fetchUniversities().then((data) => {
+      setUniversities(data);
+      setIsLoading(false);
+    });
+  }, []);
+
+  const filteredUniversities =
+    inputValue.trim() === ""
+      ? universities
+      : universities.filter((university) =>
+          university.name.toLowerCase().includes(inputValue.toLowerCase())
+        );
 
   return (
     <div className={styles.dropdown}>
@@ -27,7 +34,7 @@ useEffect(() => {
         {isLoading ? (
           <li>Loading...</li>
         ) : (
-          universities.map((uni) => (
+          filteredUniversities.map((uni) => (
             <li key={uni.id} onClick={handleClick}>
               {uni.name}
             </li>
