@@ -1,0 +1,14 @@
+[
+  {
+    "image": "caroussel-image.jpg",
+    "id": 1,
+    "author": "Clark & Alicia",
+    "description": "This fully-furnished space features a comfortable queen-sized bed, a fully-equipped kitchenette, and a cozy living area with a flat-screen TV. You'll love the convenient location, just steps away from the city's best restaurants, cafes, and shopping. Book your stay now and make Bob and Alicia's apartment your home away from home!"
+  },
+  {
+    "image": "caroussel-image-two.jpg",
+    "id": 2,
+    "author": "Clementine",
+    "description": "I had a great experience living in the university accommodation at Crown Place. The rooms were spacious and clean, and the location was perfect for getting to classes and exploring the city. The staff were friendly and helpful, and there were plenty of social events organized for residents."
+  }
+]
