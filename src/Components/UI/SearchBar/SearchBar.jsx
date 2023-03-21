@@ -4,12 +4,17 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import Dropdown from "./Dropdown";
 
 const SearchBar = () => {
+  const [inputValue, setInputValue] = useState("");
   const [showDropDown, setDropDown] = useState(false);
   const inputRef = useRef(null);
 
   const handleDropDownClick = () => {
     setDropDown(true);
   }
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  }
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (inputRef.current && !inputRef.current.contains(event.target)) {
@@ -28,8 +33,8 @@ const SearchBar = () => {
     <div className={styles.navbarSearchBar}>
       <div className={styles.searchContainer}>
         <MagnifyingGlassIcon className={styles.searchIcon} />
-        <input ref={inputRef} onClick={handleDropDownClick} type="text" placeholder="Search..." />
-        {showDropDown && <Dropdown />}
+        <input value={inputValue} ref={inputRef} onClick={handleDropDownClick} onChange={handleInputChange} type="text" placeholder="Search..." />
+        {showDropDown && <Dropdown inputValue={inputValue} />}
       </div>
     </div>
   );
