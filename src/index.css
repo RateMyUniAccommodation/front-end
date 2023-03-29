@@ -21,4 +21,10 @@ a {
 /* Add global styles here */
 :root {
   --blue: #1c4966;
+  height: 100%;
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
 }

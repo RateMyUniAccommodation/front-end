@@ -1,12 +1,16 @@
-.map {
-    height: 80vh;
-    width: 100vw;
-    z-index: inherit;
+.layoutContainer{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    z-index: -100;
 }
 
-.layoutContainer{
+.map {
     height: 100%;
     width: 100%;
-    z-index: -100;
+    z-index: inherit;
 }
 

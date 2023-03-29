@@ -1,0 +1,998 @@
+[
+    {
+        "id": 1,
+        "name": "University of Aberdeen",
+        "lat": 57.165019,
+        "lon": -2.099122
+    },
+    {
+        "id": 2,
+        "name": "Aberystwyth University",
+        "lat": 52.403473,
+        "lon": -4.043584
+    },
+    {
+        "id": 3,
+        "name": "University of Abertay Dundee",
+        "lat": 56.46334,
+        "lon": -2.973441
+    },
+    {
+        "id": 4,
+        "name": "Anglia Ruskin University",
+        "lat": 51.741381,
+        "lon": 0.474495
+    },
+    {
+        "id": 5,
+        "name": "University of the Arts London",
+        "lat": 51.517765,
+        "lon": -0.116388
+    },
+    {
+        "id": 6,
+        "name": "Aston University",
+        "lat": 52.486637,
+        "lon": -1.890952
+    },
+    {
+        "id": 7,
+        "name": "Arts University Bournemouth",
+        "lat": 50.74137,
+        "lon": -1.898107
+    },
+    {
+        "id": 8,
+        "name": "Plymouth College of Art",
+        "lat": 50.37341,
+        "lon": -4.137411
+    },
+    {
+        "id": 9,
+        "name": "Bangor University",
+        "lat": 53.229193,
+        "lon": -4.129437
+    },
+    {
+        "id": 10,
+        "name": "University of Bath",
+        "lat": 51.380441,
+        "lon": -2.330673
+    },
+    {
+        "id": 11,
+        "name": "Bath Spa University",
+        "lat": 51.373209,
+        "lon": -2.440912
+    },
+    {
+        "id": 12,
+        "name": "Birmingham City University",
+        "lat": 52.517271,
+        "lon": -1.897287
+    },
+    {
+        "id": 13,
+        "name": "University of Bedfordshire",
+        "lat": 51.87825,
+        "lon": -0.411539
+    },
+    {
+        "id": 14,
+        "name": "Bishop Grosseteste University",
+        "lat": 53.243563,
+        "lon": -0.537139
+    },
+    {
+        "id": 15,
+        "name": "University of Birmingham",
+        "lat": 52.451408,
+        "lon": -1.930047
+    },
+    {
+        "id": 16,
+        "name": "University of Bolton",
+        "lat": 53.573511,
+        "lon": -2.436238
+    },
+    {
+        "id": 17,
+        "name": "Bournemouth University",
+        "lat": 50.742979,
+        "lon": -1.897168
+    },
+    {
+        "id": 18,
+        "name": "University of Bradford",
+        "lat": 53.791242,
+        "lon": -1.766231
+    },
+    {
+        "id": 19,
+        "name": "University of Bristol",
+        "lat": 51.459066,
+        "lon": -2.603291
+    },
+    {
+        "id": 20,
+        "name": "Oxford Brookes University",
+        "lat": 51.75438,
+        "lon": -1.2232
+    },
+    {
+        "id": 21,
+        "name": "Rose Bruford College",
+        "lat": 51.439271,
+        "lon": 0.106446
+    },
+    {
+        "id": 22,
+        "name": "Brunel University London",
+        "lat": 51.532838,
+        "lon": -0.472856
+    },
+    {
+        "id": 23,
+        "name": "University of Brighton",
+        "lat": 50.842454,
+        "lon": -0.11917
+    },
+    {
+        "id": 24,
+        "name": "University of Buckingham",
+        "lat": 51.995998,
+        "lon": -0.991839
+    },
+    {
+        "id": 25,
+        "name": "Buckinghamshire New University",
+        "lat": 51.628497,
+        "lon": -0.753097
+    },
+    {
+        "id": 26,
+        "name": "University of Cambridge",
+        "lat": 52.205296,
+        "lon": 0.117067
+    },
+    {
+        "id": 27,
+        "name": "Canterbury Christ Church University",
+        "lat": 51.279643,
+        "lon": 1.089364
+    },
+    {
+        "id": 28,
+        "name": "Cardiff University",
+        "lat": 51.489057,
+        "lon": -3.179825
+    },
+    {
+        "id": 29,
+        "name": "Cardiff Metropolitan University",
+        "lat": 51.483608,
+        "lon": -3.223624
+    },
+    {
+        "id": 30,
+        "name": "University of Chester",
+        "lat": 53.198641,
+        "lon": -2.898061
+    },
+    {
+        "id": 31,
+        "name": "University of Chichester",
+        "lat": 50.84431,
+        "lon": -0.77501
+    },
+    {
+        "id": 32,
+        "name": "City University",
+        "lat": 51.527704,
+        "lon": -0.102614
+    },
+    {
+        "id": 33,
+        "name": "Courtauld Institute of Art",
+        "lat": 51.510732,
+        "lon": -0.116938
+    },
+    {
+        "id": 34,
+        "name": "Coventry University",
+        "lat": 52.405314,
+        "lon": -1.500063
+    },
+    {
+        "id": 35,
+        "name": "Cranfield University",
+        "lat": 52.073918,
+        "lon": -0.628755
+    },
+    {
+        "id": 36,
+        "name": "Royal Central School of Speech and Drama",
+        "lat": 51.544325,
+        "lon": -0.174205
+    },
+    {
+        "id": 37,
+        "name": "University of Cumbria",
+        "lat": 54.891163,
+        "lon": -2.921417
+    },
+    {
+        "id": 38,
+        "name": "University of Cumbria",
+        "lat": 54.891163,
+        "lon": -2.921417
+    },
+    {
+        "id": 39,
+        "name": "University of Derby",
+        "lat": 52.938527,
+        "lon": -1.496681
+    },
+    {
+        "id": 40,
+        "name": "De Montfort University",
+        "lat": 52.629286,
+        "lon": -1.137817
+    },
+    {
+        "id": 41,
+        "name": "University of Dundee",
+        "lat": 56.457345,
+        "lon": -2.978269
+    },
+    {
+        "id": 42,
+        "name": "University of Durham",
+        "lat": 54.768112,
+        "lon": -1.571874
+    },
+    {
+        "id": 43,
+        "name": "University of Edinburgh",
+        "lat": 55.947691,
+        "lon": -3.187347
+    },
+    {
+        "id": 44,
+        "name": "Edge Hill University",
+        "lat": 53.559608,
+        "lon": -2.873836
+    },
+    {
+        "id": 45,
+        "name": "European School of Economics",
+        "lat": 51.516667,
+        "lon": -0.153633
+    },
+    {
+        "id": 46,
+        "name": "University of Essex",
+        "lat": 51.876715,
+        "lon": 0.946666
+    },
+    {
+        "id": 47,
+        "name": "University of Exeter",
+        "lat": 50.735156,
+        "lon": -3.535048
+    },
+    {
+        "id": 48,
+        "name": "Falmouth University",
+        "lat": 50.149625,
+        "lon": -5.071079
+    },
+    {
+        "id": 49,
+        "name": "Futureworks",
+        "lat": 53.482318,
+        "lon": -2.253499
+    },
+    {
+        "id": 50,
+        "name": "Glasgow Caledonian University",
+        "lat": 55.86729,
+        "lon": -4.250057
+    },
+    {
+        "id": 51,
+        "name": "University of Glasgow",
+        "lat": 55.871751,
+        "lon": -4.28836
+    },
+    {
+        "id": 52,
+        "name": "University of Gloucestershire",
+        "lat": 51.887496,
+        "lon": -2.088788
+    },
+    {
+        "id": 53,
+        "name": "Wrexham Glyndwr University",
+        "lat": 53.052626,
+        "lon": -3.006109
+    },
+    {
+        "id": 54,
+        "name": "University of Greenwich",
+        "lat": 51.484468,
+        "lon": -0.004005
+    },
+    {
+        "id": 55,
+        "name": "Glasgow School of Art",
+        "lat": 55.865958,
+        "lon": -4.263405
+    },
+    {
+        "id": 56,
+        "name": "Guildhall School of Music and Drama",
+        "lat": 51.519804,
+        "lon": -0.094243
+    },
+    {
+        "id": 57,
+        "name": "Harper Adams University",
+        "lat": 52.779896,
+        "lon": -2.425558
+    },
+    {
+        "id": 58,
+        "name": "University of Hertfordshire",
+        "lat": 51.753128,
+        "lon": -0.240975
+    },
+    {
+        "id": 59,
+        "name": "Liverpool Hope University",
+        "lat": 53.391475,
+        "lon": -2.891936
+    },
+    {
+        "id": 60,
+        "name": "University of Huddersfield",
+        "lat": 53.643723,
+        "lon": -1.776864
+    },
+    {
+        "id": 61,
+        "name": "University of Hull",
+        "lat": 53.771778,
+        "lon": -0.366384
+    },
+    {
+        "id": 62,
+        "name": "Heriot-Watt University",
+        "lat": 55.909385,
+        "lon": -3.320682
+    },
+    {
+        "id": 63,
+        "name": "Imperial College School of Medicine",
+        "lat": 51.517469,
+        "lon": -0.173632
+    },
+    {
+        "id": 64,
+        "name": "Imperial College London",
+        "lat": 51.498317,
+        "lon": -0.176923
+    },
+    {
+        "id": 65,
+        "name": "Institute of Cancer Research",
+        "lat": 51.490831,
+        "lon": -0.181284
+    },
+    {
+        "id": 66,
+        "name": "King's College London",
+        "lat": 51.511612,
+        "lon": -0.116253
+    },
+    {
+        "id": 67,
+        "name": "Keele University",
+        "lat": 53.003262,
+        "lon": -2.273581
+    },
+    {
+        "id": 68,
+        "name": "University of Kent",
+        "lat": 51.298503,
+        "lon": 1.070975
+    },
+    {
+        "id": 69,
+        "name": "Kingston University",
+        "lat": 51.406309,
+        "lon": -0.30786
+    },
+    {
+        "id": 70,
+        "name": "University of Lancaster",
+        "lat": 54.010418,
+        "lon": -2.786451
+    },
+    {
+        "id": 71,
+        "name": "Loughborough University",
+        "lat": 52.764828,
+        "lon": -1.22952
+    },
+    {
+        "id": 72,
+        "name": "London Business School",
+        "lat": 51.526581,
+        "lon": -0.161378
+    },
+    {
+        "id": 73,
+        "name": "University of Leicester",
+        "lat": 52.622086,
+        "lon": -1.124531
+    },
+    {
+        "id": 74,
+        "name": "Leeds College of Art",
+        "lat": 53.808429,
+        "lon": -1.551775
+    },
+    {
+        "id": 75,
+        "name": "University of Leeds",
+        "lat": 53.807958,
+        "lon": -1.553329
+    },
+    {
+        "id": 76,
+        "name": "Leeds Beckett University",
+        "lat": 53.826337,
+        "lon": -1.59075
+    },
+    {
+        "id": 77,
+        "name": "Leeds Trinity University",
+        "lat": 53.84878,
+        "lon": -1.64735
+    },
+    {
+        "id": 78,
+        "name": "University of Lincoln",
+        "lat": 53.228709,
+        "lon": -0.548641
+    },
+    {
+        "id": 79,
+        "name": "Liverpool Institute for Performing Arts",
+        "lat": 53.399657,
+        "lon": -2.972271
+    },
+    {
+        "id": 80,
+        "name": "University of Liverpool",
+        "lat": 53.380314,
+        "lon": -2.976431
+    },
+    {
+        "id": 81,
+        "name": "Liverpool John Moores University",
+        "lat": 53.403685,
+        "lon": -2.973176
+    },
+    {
+        "id": 82,
+        "name": "University of London",
+        "lat": 51.520642,
+        "lon": -0.128724
+    },
+    {
+        "id": 83,
+        "name": "London Metropolitan University",
+        "lat": 51.551471,
+        "lon": -0.110381
+    },
+    {
+        "id": 84,
+        "name": "London School of Business & Finance",
+        "lat": 51.519797,
+        "lon": -0.094243
+    },
+    {
+        "id": 85,
+        "name": "London School of Economics and Political Science",
+        "lat": 51.514114,
+        "lon": -0.116971
+    },
+    {
+        "id": 86,
+        "name": "London School of Hygiene and Tropical Medicine",
+        "lat": 51.520925,
+        "lon": -0.130687
+    },
+    {
+        "id": 87,
+        "name": "Liverpool School of Tropical Medicine",
+        "lat": 53.408563,
+        "lon": -2.969135
+    },
+    {
+        "id": 88,
+        "name": "University of Manchester",
+        "lat": 53.467926,
+        "lon": -2.233224
+    },
+    {
+        "id": 89,
+        "name": "Plymouth Marjon University",
+        "lat": 50.420866,
+        "lon": -4.110758
+    },
+    {
+        "id": 90,
+        "name": "Middlesex University",
+        "lat": 51.589826,
+        "lon": -0.229909
+    },
+    {
+        "id": 91,
+        "name": "Manchester Metropolitan University",
+        "lat": 53.470917,
+        "lon": -2.239115
+    },
+    {
+        "id": 92,
+        "name": "Edinburgh Napier University",
+        "lat": 55.91805,
+        "lon": -3.24006
+    },
+    {
+        "id": 93,
+        "name": "University of Newcastle-upon-Tyne",
+        "lat": 54.98032,
+        "lon": -1.615713
+    },
+    {
+        "id": 94,
+        "name": "Royal College of Art",
+        "lat": 51.501354,
+        "lon": -0.178473
+    },
+    {
+        "id": 95,
+        "name": "Newman University",
+        "lat": 52.434122,
+        "lon": -1.995028
+    },
+    {
+        "id": 96,
+        "name": "Newman University",
+        "lat": 52.434122,
+        "lon": -1.995028
+    },
+    {
+        "id": 97,
+        "name": "National Film and Television School",
+        "lat": 51.604752,
+        "lon": -0.638385
+    },
+    {
+        "id": 98,
+        "name": "University of Northampton",
+        "lat": 52.271992,
+        "lon": -0.883103
+    },
+    {
+        "id": 99,
+        "name": "University of Nottingham",
+        "lat": 52.938184,
+        "lon": -1.19438
+    },
+    {
+        "id": 100,
+        "name": "Nottingham Trent University",
+        "lat": 52.956436,
+        "lon": -1.152077
+    },
+    {
+        "id": 101,
+        "name": "Norwich University of the Arts",
+        "lat": 52.630494,
+        "lon": 1.297272
+    },
+    {
+        "id": 102,
+        "name": "Open University",
+        "lat": 52.024914,
+        "lon": -0.709747
+    },
+    {
+        "id": 103,
+        "name": "University of Oxford",
+        "lat": 51.758038,
+        "lon": -1.26201
+    },
+    {
+        "id": 104,
+        "name": "University of Plymouth",
+        "lat": 50.375329,
+        "lon": -4.138735
+    },
+    {
+        "id": 105,
+        "name": "University of Portsmouth",
+        "lat": 50.795187,
+        "lon": -1.093628
+    },
+    {
+        "id": 106,
+        "name": "Queen Margaret University",
+        "lat": 55.931281,
+        "lon": -3.073057
+    },
+    {
+        "id": 107,
+        "name": "Queen Mary University of London",
+        "lat": 51.524636,
+        "lon": -0.04071
+    },
+    {
+        "id": 108,
+        "name": "Queen's University of Belfast",
+        "lat": 54.584772,
+        "lon": -5.934438
+    },
+    {
+        "id": 109,
+        "name": "Royal Academy of Music",
+        "lat": 51.523497,
+        "lon": -0.1517
+    },
+    {
+        "id": 110,
+        "name": "Royal Agricultural University",
+        "lat": 51.709508,
+        "lon": -1.994916
+    },
+    {
+        "id": 111,
+        "name": "Ravensbourne University London",
+        "lat": 51.501677,
+        "lon": 0.005651
+    },
+    {
+        "id": 112,
+        "name": "Royal College of Music",
+        "lat": 51.499279,
+        "lon": -0.176913
+    },
+    {
+        "id": 113,
+        "name": "Royal Conservatoire of Scotland",
+        "lat": 55.865813,
+        "lon": -4.257595
+    },
+    {
+        "id": 114,
+        "name": "University of Reading",
+        "lat": 51.457625,
+        "lon": -0.945636
+    },
+    {
+        "id": 115,
+        "name": "Robert Gordon University",
+        "lat": 57.118344,
+        "lon": -2.14474
+    },
+    {
+        "id": 116,
+        "name": "Royal Holloway and Bedford New College",
+        "lat": 51.424814,
+        "lon": -0.566745
+    },
+    {
+        "id": 117,
+        "name": "Royal Northern College of Music",
+        "lat": 53.468557,
+        "lon": -2.236963
+    },
+    {
+        "id": 118,
+        "name": "University of Roehampton",
+        "lat": 51.455585,
+        "lon": -0.247673
+    },
+    {
+        "id": 119,
+        "name": "Royal Veterinary College",
+        "lat": 51.536851,
+        "lon": -0.133524
+    },
+    {
+        "id": 120,
+        "name": "University of Salford",
+        "lat": 53.483487,
+        "lon": -2.270651
+    },
+    {
+        "id": 121,
+        "name": "St George's Hospital Medical School",
+        "lat": 51.427798,
+        "lon": -0.175228
+    },
+    {
+        "id": 122,
+        "name": "University of Sheffield",
+        "lat": 53.381363,
+        "lon": -1.48853
+    },
+    {
+        "id": 123,
+        "name": "Sheffield Hallam University",
+        "lat": 53.379194,
+        "lon": -1.465255
+    },
+    {
+        "id": 124,
+        "name": "School of Oriental and African Studies",
+        "lat": 51.52235,
+        "lon": -0.129259
+    },
+    {
+        "id": 125,
+        "name": "Southampton Solent University",
+        "lat": 50.907747,
+        "lon": -1.400166
+    },
+    {
+        "id": 126,
+        "name": "University of Southampton",
+        "lat": 50.934099,
+        "lon": -1.395714
+    },
+    {
+        "id": 127,
+        "name": "University of South Wales",
+        "lat": 51.587622,
+        "lon": -3.327445
+    },
+    {
+        "id": 128,
+        "name": "SRUC",
+        "lat": 55.921623,
+        "lon": -3.176228
+    },
+    {
+        "id": 129,
+        "name": "University of St Andrews",
+        "lat": 56.341239,
+        "lon": -2.793287
+    },
+    {
+        "id": 130,
+        "name": "Staffordshire University",
+        "lat": 52.812975,
+        "lon": -2.081855
+    },
+    {
+        "id": 131,
+        "name": "University of Stirling",
+        "lat": 56.145463,
+        "lon": -3.920023
+    },
+    {
+        "id": 132,
+        "name": "St Mary's University College",
+        "lat": 54.593162,
+        "lon": -5.961323
+    },
+    {
+        "id": 133,
+        "name": "St Mary's University",
+        "lat": 51.436152,
+        "lon": -0.335907
+    },
+    {
+        "id": 134,
+        "name": "London South Bank University",
+        "lat": 51.498708,
+        "lon": -0.101772
+    },
+    {
+        "id": 135,
+        "name": "Stranmillis University College",
+        "lat": 54.571733,
+        "lon": -5.936458
+    },
+    {
+        "id": 136,
+        "name": "University of Strathclyde",
+        "lat": 55.86125,
+        "lon": -4.244706
+    },
+    {
+        "id": 137,
+        "name": "University of Sunderland",
+        "lat": 54.904456,
+        "lon": -1.390973
+    },
+    {
+        "id": 138,
+        "name": "University of Surrey",
+        "lat": 51.242572,
+        "lon": -0.587946
+    },
+    {
+        "id": 139,
+        "name": "University of Sussex",
+        "lat": 50.86447,
+        "lon": -0.087076
+    },
+    {
+        "id": 140,
+        "name": "Swansea University",
+        "lat": 51.609627,
+        "lon": -3.980616
+    },
+    {
+        "id": 141,
+        "name": "Teesside University",
+        "lat": 54.572076,
+        "lon": -1.234694
+    },
+    {
+        "id": 142,
+        "name": "Trinity Laban Conservatoire of Music and Dance",
+        "lat": 51.483587,
+        "lon": -0.007198
+    },
+    {
+        "id": 143,
+        "name": "University for the Creative Arts",
+        "lat": 51.215684,
+        "lon": -0.805973
+    },
+    {
+        "id": 144,
+        "name": "University for the Creative Arts",
+        "lat": 51.215684,
+        "lon": -0.805973
+    },
+    {
+        "id": 145,
+        "name": "University College Birmingham",
+        "lat": 52.48184,
+        "lon": -1.905939
+    },
+    {
+        "id": 146,
+        "name": "Institute of Education",
+        "lat": 51.522977,
+        "lon": -0.127965
+    },
+    {
+        "id": 147,
+        "name": "University College London",
+        "lat": 51.523569,
+        "lon": -0.132424
+    },
+    {
+        "id": 148,
+        "name": "University of Central Lancashire",
+        "lat": 53.761338,
+        "lon": -2.707384
+    },
+    {
+        "id": 149,
+        "name": "University Campus Suffolk",
+        "lat": 52.052392,
+        "lon": 1.163459
+    },
+    {
+        "id": 150,
+        "name": "University of East Anglia",
+        "lat": 52.622369,
+        "lon": 1.241391
+    },
+    {
+        "id": 151,
+        "name": "University of East London",
+        "lat": 51.507485,
+        "lon": 0.064759
+    },
+    {
+        "id": 152,
+        "name": "University of the Highlands and Islands",
+        "lat": 57.469405,
+        "lon": -4.230246
+    },
+    {
+        "id": 153,
+        "name": "University of Ulster",
+        "lat": 55.149335,
+        "lon": -6.676089
+    },
+    {
+        "id": 154,
+        "name": "University of Northumbria at Newcastle",
+        "lat": 54.976897,
+        "lon": -1.607575
+    },
+    {
+        "id": 155,
+        "name": "University of the West of England",
+        "lat": 51.501079,
+        "lon": -2.547458
+    },
+    {
+        "id": 156,
+        "name": "University of West London",
+        "lat": 51.507259,
+        "lon": -0.303013
+    },
+    {
+        "id": 157,
+        "name": "University of the West of Scotland",
+        "lat": 55.843316,
+        "lon": -4.429782
+    },
+    {
+        "id": 158,
+        "name": "University of Wales Trinity Saint David",
+        "lat": 51.858361,
+        "lon": -4.328713
+    },
+    {
+        "id": 159,
+        "name": "University of Warwick",
+        "lat": 52.385576,
+        "lon": -1.564787
+    },
+    {
+        "id": 160,
+        "name": "University of Westminster",
+        "lat": 51.516792,
+        "lon": -0.143367
+    },
+    {
+        "id": 161,
+        "name": "University of Winchester",
+        "lat": 51.060002,
+        "lon": -1.32674
+    },
+    {
+        "id": 162,
+        "name": "University of Wolverhampton",
+        "lat": 52.587529,
+        "lon": -2.12806
+    },
+    {
+        "id": 163,
+        "name": "University of Worcester",
+        "lat": 52.197366,
+        "lon": -2.243085
+    },
+    {
+        "id": 164,
+        "name": "Writtle College",
+        "lat": 51.737196,
+        "lon": 0.428133
+    },
+    {
+        "id": 165,
+        "name": "University of York",
+        "lat": 53.948278,
+        "lon": -1.051673
+    },
+    {
+        "id": 166,
+        "name": "York St John University",
+        "lat": 53.964844,
+        "lon": -1.079543
+    }
+]
