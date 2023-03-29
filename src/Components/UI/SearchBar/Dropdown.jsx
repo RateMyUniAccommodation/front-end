@@ -10,12 +10,13 @@ const Dropdown = ({ inputValue }) => {
 
   const handleClick = (event) => {
     const university = event.target.textContent;
-    navigate(`/accommodation/${university}`);
+    navigate(`/university/${university}`);
   };
 
   useEffect(() => {
     setIsLoading(true);
     fetchUniversities().then((data) => {
+      console.log(data);
       setUniversities(data);
       setIsLoading(false);
     });

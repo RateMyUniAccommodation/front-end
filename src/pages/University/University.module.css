@@ -1,0 +1,12 @@
+.map {
+    height: 80vh;
+    width: 100vw;
+    z-index: inherit;
+}
+
+.layoutContainer{
+    height: 100%;
+    width: 100%;
+    z-index: -100;
+}
+

@@ -1,5 +1,5 @@
 [
-  { "id": 1, "name": "University of Aberdeen" },
+  { "id": 1, "name": "University of Aberdeen", "lat": 2, "lon": 3},
   { "id": 2, "name": "Aberystwyth University" },
   { "id": 3, "name": "University of Abertay Dundee" },
   { "id": 4, "name": "Anglia Ruskin University" },

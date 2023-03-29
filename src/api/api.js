@@ -10,6 +10,12 @@ export const fetchProfiles = async () => {
    return users;
  };
 
+export const fetchUniversity = async () => {
+  const response = await fetch("/mock-data/users.json");
+   const users = await response.json();
+   return users;
+ };
+
 export default {
   fetchUniversities,
   fetchProfiles
