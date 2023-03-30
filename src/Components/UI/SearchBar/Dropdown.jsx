@@ -16,7 +16,6 @@ const Dropdown = ({ inputValue }) => {
   useEffect(() => {
     setIsLoading(true);
     fetchUniversities().then((data) => {
-      console.log(data);
       setUniversities(data);
       setIsLoading(false);
     });

@@ -1,22 +1,37 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
 import styles from "./University.module.css";
 
-const University = (props) => {
-  const{title, lat, lon} = props;
+const DEFAULT_ZOOM = 15
+
+const Recenter = ({ cordinates }) => {
+  const map = useMap();
+  map.setZoom(DEFAULT_ZOOM);
+  useEffect(() => {
+    map.setView(cordinates);
+  }, cordinates);
+  return null;
+}
+
+const University = ({ title, lat, lon }) => {
+  const uniCoordinates = [lat, lon];
+  console.log(uniCoordinates);
+
   return (
     <div className={styles.layoutContainer}>
-      <MapContainer className={styles.map} center={[lat, lon]} zoom={15} scrollWheelZoom={true}>
+      <h1>{title}</h1>
+      <MapContainer className={styles.map} center={[55.23, -4.54]} zoom={6} scrollWheelZoom={true}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {/* <Marker position={[51.505, -0.09]}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker> */}
+        <Recenter cordinates={uniCoordinates} />
+        <Marker position={uniCoordinates}>
+          <Popup>
+            {title}<br/>
+            {uniCoordinates}
+          </Popup>
+        </Marker>
       </MapContainer>
     </div>
   );
