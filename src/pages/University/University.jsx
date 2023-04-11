@@ -5,14 +5,15 @@ import Recenter from "./SubComponents/Recenter";
 
 const DEFAULT_ZOOM = 15
 
-const University = ({ title, lat, lon }) => {
+const University = ({ title, lat, lon, navHeight }) => {
   const uniCoordinates = [lat, lon];
-  console.log(uniCoordinates);
+  const topSize = { top: navHeight+'px'}
+  console.log(topSize)
   return (
-    <div className={styles.layoutContainer}>
-      <div className={styles.item}>
+    <div className={styles.layoutContainer} style={topSize}>
+      {/* <div className={styles.item}>
 
-      </div>
+      </div> */}
       <div className={styles.item}>
       <MapContainer className={styles.map} center={[55.23, -4.54]} zoom={6} scrollWheelZoom={true}>
         <TileLayer
