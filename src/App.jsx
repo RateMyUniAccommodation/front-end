@@ -12,8 +12,6 @@ import UniversityData from "./assets/data/universityData.json"
 
 import MapPage from "./pages/University/University"
 
-const data = UniversityData
-
 const App = () => {
   const [navHeight, setNavHeight] = useState(0);
 
