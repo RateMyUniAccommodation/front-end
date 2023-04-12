@@ -1,13 +1,22 @@
-.layoutContainer{
+.wrapper{
     z-index: 1;
     position: absolute;
-
     bottom: 0;
     left: 0;
     right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    /* flex-direction: row; */
 }
 
-.item {
+.infoContainer {
+    height: 100%;
+    width: 50%;
+    z-index: inherit;
+    
+}
+
+.mapContainer {
     height: 100%;
     width: 50%;
     z-index: inherit;
