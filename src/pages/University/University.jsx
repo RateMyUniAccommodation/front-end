@@ -10,11 +10,11 @@ const University = ({ title, lat, lon, navHeight }) => {
   const topSize = { top: navHeight+'px'}
   console.log(topSize)
   return (
-    <div className={styles.layoutContainer} style={topSize}>
-      {/* <div className={styles.item}>
+    <div className={styles.wrapper} style={topSize}>
+      <div className={styles.infoContainer}>
 
-      </div> */}
-      <div className={styles.item}>
+      </div>
+      <div className={styles.mapContainer}>
       <MapContainer className={styles.map} center={[55.23, -4.54]} zoom={6} scrollWheelZoom={true}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
