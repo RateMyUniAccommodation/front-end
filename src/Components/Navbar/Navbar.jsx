@@ -6,7 +6,7 @@ import Navitem from "./Navitem";
 import SearchBar from "../UI/SearchBar/SearchBar";
 import Button from "../UI/Button/Button";
 
-const Navbar = ({ onComponentLoad, onHeightChange }) => {
+const Navbar = ({ onHeightChange }) => {
   const navRef = useRef(null);
   const [isLogin, setLogin] = useState(false);
 
@@ -16,10 +16,6 @@ const Navbar = ({ onComponentLoad, onHeightChange }) => {
   const handleClick = () => {
     setLogin((prevLogin) => !prevLogin);
   }
-
-  useEffect(() => {
-    onComponentLoad(navRef.current.offsetHeight);
-  }, [onComponentLoad]);
 
   useEffect(() => {
     const resizeObserver = new ResizeObserver((entries) => {

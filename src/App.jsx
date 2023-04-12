@@ -17,10 +17,6 @@ const data = UniversityData
 const App = () => {
   const [navHeight, setNavHeight] = useState(0);
 
-  const handleLoad = (height) => {
-    setNavHeight(height)
-  }
-
   const handleHeightChange = (height) => {
     setNavHeight(height);
   };
@@ -36,7 +32,7 @@ const App = () => {
 
   return (
     <Fragment>
-      <Navbar onComponentLoad={handleLoad} onHeightChange={handleHeightChange}/>
+      <Navbar onHeightChange={handleHeightChange}/>
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         {universityPages}

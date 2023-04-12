@@ -8,11 +8,12 @@ const DEFAULT_ZOOM = 15
 const University = ({ title, lat, lon, navHeight }) => {
   const uniCoordinates = [lat, lon];
   const topSize = { top: navHeight+'px'}
-  console.log(topSize)
   return (
     <div className={styles.wrapper} style={topSize}>
       <div className={styles.infoContainer}>
-
+        <h1>{title}</h1>
+        <div>Filter</div>
+        <div>Accom List</div>
       </div>
       <div className={styles.mapContainer}>
       <MapContainer className={styles.map} center={[55.23, -4.54]} zoom={6} scrollWheelZoom={true}>
