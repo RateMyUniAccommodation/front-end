@@ -7,6 +7,7 @@ import Contact from "./pages/Contact/Contact";
 import Error from "./pages/Error/Error";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
+import Accomodation from "./pages/Accommodation/Accommodation";
 
 import UniversityData from "./assets/data/universityData.json"
 
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="accommodation" element={<Accomodation />} />
         <Route path="auth" element={<Auth />} />
         <Route path="*" element={<Error />} />
       </Routes>
