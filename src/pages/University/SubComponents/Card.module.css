@@ -1,9 +1,10 @@
 .card {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   width: 25rem;
   text-align: left;
-  height: 12rem;
+  max-height: 14rem;
   overflow: hidden;
   padding: 1rem;
   background-color: white;
@@ -24,6 +25,33 @@
   margin-bottom: 0.5rem;
 }
 
+/* setup grid for facilities */
+.facilities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.facility {
+  /* light grey */
+  background-color: #F3F4F6;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+.facility p {
+  font-size: 0.75rem;
+  color: #4B5563;
+}
+.icon {
+  width: 1rem;
+  height: 1rem;
+  color: #4B5563;
+}
+
 .review {
   display: flex;
   align-items: center;
@@ -32,7 +60,7 @@
 
 .review p {
   font-size: 1rem;
-  color: gray;
+  color: #FBBF24;
 }
 
 .star {
