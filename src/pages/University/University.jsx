@@ -5,7 +5,8 @@ import Recenter from "./SubComponents/Recenter";
 
 const DEFAULT_ZOOM = 15
 
-const University = ({ title, lat, lon, navHeight }) => {
+const University = ({ title, lat, lon, accommodations, navHeight }) => {
+  console.log(accommodations);
   const uniCoordinates = [lat, lon];
   const topSize = { top: navHeight+'px'}
   return (

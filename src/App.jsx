@@ -8,10 +8,8 @@ import Error from "./pages/Error/Error";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Accomodation from "./pages/Accommodation/Accommodation";
-
-import UniversityData from "./assets/data/universityData.json"
-
-import MapPage from "./pages/University/University"
+import UniversityData from "./assets/data/universityData.json";
+import University from "./pages/University/University";
 
 const App = () => {
   const [navHeight, setNavHeight] = useState(0);
@@ -21,17 +19,27 @@ const App = () => {
   };
 
   const universityPages = UniversityData.map((page) => {
-    const { id, name, lat, lon } = page;
+    const { id, name, lat, lon, accommodations } = page;
     return (
-      <Route key={id} path={`/university/${name}`}
-        element={<MapPage title={name} lat={lat} lon={lon} navHeight={navHeight}/>
-        } />
-    )
-  })
+      <Route
+        key={id}
+        path={`/university/${name}`}
+        element={
+          <University
+            title={name}
+            lat={lat}
+            lon={lon}
+            accommodations={accommodations}
+            navHeight={navHeight}
+          />
+        }
+      />
+    );
+  });
 
   return (
     <Fragment>
-      <Navbar onHeightChange={handleHeightChange}/>
+      <Navbar onHeightChange={handleHeightChange} />
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         {universityPages}
