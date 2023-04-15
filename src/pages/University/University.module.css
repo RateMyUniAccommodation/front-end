@@ -13,6 +13,10 @@
   height: 100%;
   width: 100%;
   z-index: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .mapContainer {

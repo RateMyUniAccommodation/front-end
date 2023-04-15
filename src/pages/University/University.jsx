@@ -35,7 +35,6 @@ const University = ({ title, lat, lon, accommodations, navHeight }) => {
       </div>
       <div className={styles.infoContainer}>
         <h1>{title}</h1>
-        <div>Filter</div>
         {accommodations.map((accommodation) => {
           return <Card
           //use index as key for now
