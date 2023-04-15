@@ -1,5 +1,4 @@
 .wrapper {
-  position: absolute;
   z-index: 1;
   bottom: 0;
   left: 0;
@@ -7,6 +6,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  margin: 2rem 0 2rem 0;
 }
 
 .infoContainer {
@@ -35,5 +35,8 @@
 @media (max-width: 767px){
   .wrapper {
     grid-template-columns: 1fr;
+  }
+  .mapContainer {
+    height: 30vh; /* Adjust height for smaller screens */
   }
 }
