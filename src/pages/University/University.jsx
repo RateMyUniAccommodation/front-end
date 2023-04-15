@@ -4,10 +4,8 @@ import styles from "./University.module.css";
 import Card from "./SubComponents/Card";
 import Recenter from "./SubComponents/Recenter";
 
-const DEFAULT_ZOOM = 15;
-
 const University = ({ title, lat, lon, accommodations, navHeight }) => {
-  console.log(accommodations);
+  const DEFAULT_ZOOM = 15;
   const uniCoordinates = [lat, lon];
   const topSize = { top: navHeight + "px" };
   return (
@@ -35,6 +33,7 @@ const University = ({ title, lat, lon, accommodations, navHeight }) => {
       </div>
       <div className={styles.infoContainer}>
         <h1>{title}</h1>
+        <h2>Accommodations</h2>
         {accommodations.map((accommodation) => {
           return <Card
           //use index as key for now
