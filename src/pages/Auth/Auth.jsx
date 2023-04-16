@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Auth.module.css';
 import Err from './SubComponents/Error';
-import { checkEmailExists, checkUsernameExists, login, signup } from '../../api/api';
+import { checkEmailExists, checkUsernameExists } from '../../api/api';
 
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -74,9 +74,6 @@ const Auth = () => {
     if(checkEmail() || checkUsername() || checkPassword()) {
       console.log('Invalid signup');
     }
-
-    //
-
   }
 
   function resetErrors() {
@@ -158,7 +155,7 @@ const Auth = () => {
             <br />
             {invalidPasswordFormat && <Err errMsg="Invalid password, must be 6 or more characters" />}
 
-
+            {signupError && <Err errMsg="An error occurred during signup, try again" />}
             <button type="submit">Sign up</button>
           </form>
           <p>Have an account?&nbsp;
