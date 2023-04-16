@@ -10,20 +10,37 @@ export const fetchProfiles = async () => {
    return users;
  };
 
-export const checkEmail = async () => {
+export const checkEmailExists = async () => {
   const response  = await fetch("/mock-data/users.json");
-  const usernameExists = await response.json();
+  const emailExists = true;
+  return emailExists
+}
+
+export const checkUsernameExists = async () => {
+  const response = await fetch("");
+  const usernameExists = true;
   return usernameExists
 }
 
-export const checkUsername = async () => {
+export const login = async () => {
   const response = await fetch("");
+  const token = await response.json();
+  return token
+}
 
+export const register = async () => {
+  const response = await fetch("");
+  const token = await response.json();
+  return token
 }
 
 export default {
   fetchUniversities,
-  fetchProfiles
+  fetchProfiles,
+  checkEmailExists,
+  checkUsernameExists,
+  login,
+  register
 };
 
 

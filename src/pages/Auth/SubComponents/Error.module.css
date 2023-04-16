@@ -1,12 +1,16 @@
 .errContainer {
-    background-color: #ff4a4a;
+    border-color: #fc3f3f;
+    border-width: 2px;
+    border-style: solid;
     padding: 4px;
     padding-right: 5px;
     border-radius: 5px;
     margin-bottom: 10px;
+    color: black;;
 }
 
 .icon {
+    color: #fc3f3f;
     height: 15px;
     width: 15px;
     margin-right: 5px;
