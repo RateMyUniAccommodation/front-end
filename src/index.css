@@ -19,7 +19,7 @@ a {
 }
 
 /* Add global styles here */
-:root {
+#root {
   --blue: #1c4966;
   height: 100%;
 }

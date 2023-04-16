@@ -1,0 +1,59 @@
+.wrapper {
+
+}
+
+.authContainer {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-block: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+#f5f5f5 {
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+h1,
+label,
+input {
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="button"] {
+    background: none;
+    border: none;
+    color: #007bff;
+}
+
+button[type="button"]:hover {
+    color: #0056b3;
+}
