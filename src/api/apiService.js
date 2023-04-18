@@ -1,10 +1,9 @@
-const API_BASE_URL = 'localhost:8000/api';
+const API_BASE_URL = 'http://localhost:8000/api';
 
 const apiService = {
     async get(endpoint) {
         try {
             const response = await fetch(`${API_BASE_URL}/${endpoint}`);
-
             if (response.ok) {
                 const data = await response.json();
                 return data;
@@ -12,7 +11,7 @@ const apiService = {
                 throw new Error(`Failed to fetch data from ${endpoint}`);
             }
         } catch (error) {
-            console.error(error);
+            console.error("Caught Error:\n"+error);
             throw error;
         }
     },

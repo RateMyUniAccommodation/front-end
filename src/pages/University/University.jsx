@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import styles from "./University.module.css";
 import Recenter from "./SubComponents/Recenter";
+import { getMapData } from "../../api/api";
 
 const DEFAULT_ZOOM = 15
 
 const University = ({ title, lat, lon, navHeight }) => {
+  const [mapData, setMapData] = useState([])
   const uniCoordinates = [lat, lon];
   const topSize = { top: navHeight+'px'}
+  getMapData(lat,lon).then(data => {
+    setMapData(data)
+  })
+  
   return (
     <div className={styles.wrapper} style={topSize}>
       <div className={styles.mapContainer}>
@@ -29,6 +35,19 @@ const University = ({ title, lat, lon, navHeight }) => {
               {lat}, {lon}
             </Popup>
           </Marker>
+          {
+            mapData.map((accom) => {
+              return (
+                <Marker position={[accom.lat, accom.lon]}>
+                  <Popup>
+                    {accom.name}
+                    <br />
+                    {accom.lat}, {accom.lon}
+                  </Popup>
+                </Marker>
+              )
+          })
+          }
         </MapContainer>
       </div>
       <div className={styles.infoContainer}>
