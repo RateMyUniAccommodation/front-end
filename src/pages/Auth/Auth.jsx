@@ -1,114 +1,128 @@
-import React, { useState } from 'react';
-import styles from './Auth.module.css';
-import Err from './SubComponents/Error';
-import { checkEmailExists, checkUsernameExists } from '../../api/api';
+import React, { useReducer } from "react";
+import styles from "./Auth.module.css";
+
+const initialState = {
+  email: "",
+  password: "",
+  isSubmitting: false,
+  errorMessage: null,
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "SET_EMAIL":
+      return {
+        ...state,
+        email: action.payload.email,
+      };
+    case "SET_PASSWORD":
+      return {
+        ...state,
+        password: action.payload.password,
+      };
+    case "LOGIN_REQUEST":
+      return {
+        ...state,
+        isSubmitting: true,
+        errorMessage: null,
+      };
+    case "LOGIN_SUCCESS":
+      return {
+        ...state,
+        isSubmitting: false,
+      };
+    case "LOGIN_FAILURE":
+      return {
+        ...state,
+        isSubmitting: false,
+        errorMessage: action.payload.errorMessage,
+      };
+    default:
+      return state;
+  }
+};
 
 const Auth = () => {
-  const [isLogin, setIsLogin] = useState(true);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [username, setUsername] = useState('');
+  const handleEmailChange = (event) => {
+    dispatch({
+      type: "SET_EMAIL",
+      payload: { email: event.target.value },
+    });
+  };
 
-  const [loginError, setLoginError] = useState(false);
+  const handlePasswordChange = (event) => {
+    dispatch({
+      type: "SET_PASSWORD",
+      payload: { password: event.target.value },
+    });
+  };
 
-  const [invalidPasswordFormat, setinvalidPasswordFormat] = useState(false);
-  const [invalidUsernameFormat, setinvalidUsernameFormat] = useState(false);
-  const [usernameExists, setusernameExists] = useState(false);
-  const [invalidEmailFormat, setinvalidEmailFormat] = useState(false);
-  const [emailExists, setemailExists] = useState(false);
-  const [signupError, setsignupError] = useState(false);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch({ type: "LOGIN_REQUEST" });
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  }
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  }
-
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
-  }
-
-  function checkUsername() {
-    if (username.length <= 4) {
-      setinvalidUsernameFormat(true);
-      return false;
-    }
-    if (checkUsernameExists(username)) {
-      setusernameExists(true);
-      return false;
-    }
-    return true;
-  }
-
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  function checkEmail() {
-    if (emailPattern.test(email) === false) {
-      setinvalidEmailFormat(true);
-      return false;
-    }
-    if (checkEmailExists(email)) {
-      setemailExists(true);
-      return false;
-    }
-    return true;
-  }
-
-  function checkPassword() {
-    if (password.length <= 6) {
-      setinvalidPasswordFormat(true);
-      return false;
-    }
-    return true;
-  }
-
-  const handleSignupSubmit = (e) => {
-    resetErrors();
-    console.log('Email:', email);
-    console.log('Password:', password);
-    console.log('Username:', username);
-    e.preventDefault();
-    if(checkEmail() || checkUsername() || checkPassword()) {
-      console.log('Invalid signup');
-    }
-  }
-
-  function resetErrors() {
-    setLoginError(false);
-    setinvalidPasswordFormat(false);
-    setinvalidUsernameFormat(false);
-    setusernameExists(false);
-    setinvalidEmailFormat(false);
-    setemailExists(false);
-    setsignupError(false);
-  }
-
-  const handleLoginSubmit = (e) => {
-    e.preventDefault();
-    resetErrors()
-    // Send email and password to backend for authentication
-    console.log('Email:', email);
-    console.log('Password:', password);
-    //succesful login
-    if (true) {
-      setLoginError(true);
-    }
-    else {
-
-    }
-  }
-
-  const toggleForm = () => {
-    setIsLogin(!isLogin);
-    resetErrors();
-  }
+    // Simulate API request
+    setTimeout(() => {
+      if (state.email === "test@test.com" && state.password === "password") {
+        dispatch({ type: "LOGIN_SUCCESS" });
+      } else {
+        dispatch({
+          type: "LOGIN_FAILURE",
+          payload: { errorMessage: "Invalid email or password" },
+        });
+      }
+    }, 2000);
+  };
 
   return (
-    <div></div>
+    <div className={styles["login-container"]}>
+      <form className={styles["login-form"]} onSubmit={handleSubmit}>
+        <h1 className={styles["login-title"]}>Login</h1>
+        {state.errorMessage && (
+          <div className={styles["login-error"]}>{state.errorMessage}</div>
+        )}
+        <div className={styles["login-input-container"]}>
+          <label htmlFor="email" className={styles["login-label"]}>
+            Email
+          </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            className={styles["login-input"]}
+            value={state.email}
+            onChange={handleEmailChange}
+            required
+          />
+        </div>
+        <div className={styles["login-input-container"]}>
+          <label htmlFor="password" className={styles["login-label"]}>
+            Password
+          </label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            className={styles["login-input"]}
+            value={state.password}
+            onChange={handlePasswordChange}
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          className={`${styles["login-submit"]} ${
+            state.isSubmitting ? styles["login-submitting"] : ""
+          }`}
+          disabled={state.isSubmitting}
+        >
+          {state.isSubmitting ? "Logging in..." : "Login"}
+        </button>
+      </form>
+    </div>
   );
-}
+};
 
 export default Auth;
