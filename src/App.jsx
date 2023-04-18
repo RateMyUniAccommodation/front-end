@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Auth from "./pages/Auth/Auth";
 import Home from "./pages/Home/Home";
@@ -8,15 +8,25 @@ import Error from "./pages/Error/Error";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Accomodation from "./pages/Accommodation/Accommodation";
-import UniversityData from "./assets/data/universityData.json";
 import University from "./pages/University/University";
+import { fetchUniversities } from "./api/api";
 
 const App = () => {
   const [navHeight, setNavHeight] = useState(0);
+  const [UniversityData, setUniversityData] = useState([]);
 
   const handleHeightChange = (height) => {
     setNavHeight(height);
   };
+
+  useEffect(() => {
+    const fetchUniversityData = async () => {
+      const universityData = await fetchUniversities();
+      setUniversityData(universityData);
+    };
+    fetchUniversityData();
+  }, []);
+
 
   const universityPages = UniversityData.map((page) => {
     const { id, name, lat, lon, accommodations } = page;
