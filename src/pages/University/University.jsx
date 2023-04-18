@@ -4,12 +4,11 @@ import styles from "./University.module.css";
 import Card from "./SubComponents/Card";
 import Recenter from "./SubComponents/Recenter";
 
-const University = ({ title, lat, lon, accommodations, navHeight }) => {
+const University = ({ title, lat, lon, accommodations }) => {
   const DEFAULT_ZOOM = 15;
   const uniCoordinates = [lat, lon];
-  const topSize = { top: navHeight + "px" };
   return (
-    <div className={styles.wrapper} style={topSize}>
+    <div className={styles.wrapper} >
       <div className={styles.mapContainer}>
         <MapContainer
           className={styles.map}
