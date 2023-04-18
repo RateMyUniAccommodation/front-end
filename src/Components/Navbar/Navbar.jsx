@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { HomeIcon } from "@heroicons/react/24/solid";
 import Navitem from "./Navitem";
@@ -9,12 +9,14 @@ import Button from "../UI/Button/Button";
 const Navbar = ({ onHeightChange }) => {
   const navRef = useRef(null);
   const [isLogin, setLogin] = useState(false);
-
+  const navigate = useNavigate();
   const location = useLocation();
   const isHomePage = location.pathname === "/home";
 
+
   const handleClick = () => {
-    setLogin((prevLogin) => !prevLogin);
+    navigate("auth");
+    // setLogin((prevLogin) => !prevLogin);
   }
 
   useEffect(() => {
