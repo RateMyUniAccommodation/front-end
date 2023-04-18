@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState, useMemo } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Auth from "./pages/Auth/Auth";
 import Home from "./pages/Home/Home";
@@ -12,12 +12,7 @@ import University from "./pages/University/University";
 import { fetchUniversities } from "./api/api";
 
 const App = () => {
-  const [navHeight, setNavHeight] = useState(0);
-  const [UniversityData, setUniversityData] = useState([]);
-
-  const handleHeightChange = (height) => {
-    setNavHeight(height);
-  };
+  const [universityData, setUniversityData] = useState([]);
 
   useEffect(() => {
     const fetchUniversityData = async () => {
@@ -27,29 +22,29 @@ const App = () => {
     fetchUniversityData();
   }, []);
 
-
-  const universityPages = UniversityData.map((page) => {
-    const { id, name, lat, lon, accommodations } = page;
-    return (
-      <Route
-        key={id}
-        path={`/university/${name}`}
-        element={
-          <University
-            title={name}
-            lat={lat}
-            lon={lon}
-            accommodations={accommodations}
-            navHeight={navHeight}
-          />
-        }
-      />
-    );
-  });
+  const universityPages = useMemo(() => {
+    return universityData.map((page) => {
+      const { id, name, lat, lon, accommodations } = page;
+      return (
+        <Route
+          key={id}
+          path={`/university/${name}`}
+          element={
+            <University
+              title={name}
+              lat={lat}
+              lon={lon}
+              accommodations={accommodations}
+            />
+          }
+        />
+      );
+    });
+  }, [universityData]);
 
   return (
     <Fragment>
-      <Navbar onHeightChange={handleHeightChange} />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         {universityPages}
