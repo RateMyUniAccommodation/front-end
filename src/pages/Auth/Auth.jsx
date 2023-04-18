@@ -107,63 +107,7 @@ const Auth = () => {
   }
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.authContainer}>
-        {isLogin ? <>
-          <h1>Login</h1>
-          <form onSubmit={handleLoginSubmit}>
-
-          
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" value={email} onChange={handleEmailChange} />
-            <br />
-
-            
-            <label htmlFor="password">Password:</label>
-            <input type="password" id="password" value={password} onChange={handlePasswordChange} />
-            <br />
-
-
-            {loginError && <Err errMsg="Incorrect email or password" />}
-            <button type="submit">Login</button>
-            <br />
-          </form>
-          <p>Dont have an account?&nbsp;
-            <button type="button" onClick={toggleForm}>Signup</button>
-          </p>
-        </> : <>
-          <h1>Signup</h1>
-          <form onSubmit={handleSignupSubmit}>
-
-
-            <label htmlFor="username">Username:</label>
-            <input type="text" id="username" value={username} onChange={handleUsernameChange} onBlur={checkUsername} />
-            <br />
-            {invalidUsernameFormat && <Err errMsg="Invalid username, must be four or more characters" />}
-            {usernameExists && <Err errMsg="Username already exists" />}
-
-
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" value={email} onChange={handleEmailChange} onBlur={checkEmail} />
-            <br />
-            {invalidEmailFormat && <Err errMsg="Invalid email format" />}
-            {emailExists && <Err errMsg="Email already exists" />}
-
-
-            <label htmlFor="password">Password:</label>
-            <input type="password" id="password" value={password} onChange={handlePasswordChange} onBlur={checkPassword}/>
-            <br />
-            {invalidPasswordFormat && <Err errMsg="Invalid password, must be 6 or more characters" />}
-
-            {signupError && <Err errMsg="An error occurred during signup, try again" />}
-            <button type="submit">Sign up</button>
-          </form>
-          <p>Have an account?&nbsp;
-            <button type="button" onClick={toggleForm}>Log in</button>
-          </p>
-        </>}
-      </div>
-    </div>
+    <div></div>
   );
 }
 
