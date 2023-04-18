@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { fetchUniversities } from "../../../api/api";
 import { useNavigate } from "react-router-dom";
 import styles from "./Dropdown.module.css";
@@ -8,10 +8,12 @@ const Dropdown = ({ inputValue }) => {
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
 
-  const handleClick = (event) => {
-    const university = event.target.textContent;
-    navigate(`/university/${university}`);
-  };
+  const handleClick = useCallback(
+    (university) => {
+      navigate(`/university/${university}`);
+    },
+    [navigate]
+  );
 
   useEffect(() => {
     setIsLoading(true);
@@ -21,12 +23,13 @@ const Dropdown = ({ inputValue }) => {
     });
   }, []);
 
-  const filteredUniversities =
-    inputValue.trim() === ""
+  const filteredUniversities = useMemo(() => {
+    return inputValue.trim() === ""
       ? universities
       : universities.filter((university) =>
           university.name.toLowerCase().includes(inputValue.toLowerCase())
         );
+  }, [inputValue, universities]);
 
   return (
     <div className={styles.dropdown}>
@@ -35,7 +38,7 @@ const Dropdown = ({ inputValue }) => {
           <li>Loading...</li>
         ) : (
           filteredUniversities.map((uni) => (
-            <li key={uni.id} onClick={handleClick}>
+            <li key={uni.id} onClick={() => handleClick(uni.name)}>
               {uni.name}
             </li>
           ))
@@ -44,5 +47,6 @@ const Dropdown = ({ inputValue }) => {
     </div>
   );
 };
+
 
 export default Dropdown;
