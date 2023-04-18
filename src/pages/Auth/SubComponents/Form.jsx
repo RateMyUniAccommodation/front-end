@@ -79,7 +79,8 @@ const Form = () => {
   return (
     <div className={styles["login-container"]}>
       <form className={styles["login-form"]} onSubmit={handleSubmit}>
-        <h1 className={styles["login-title"]}>Login</h1>
+        <h1>Welcome back</h1>
+        <p>Welcome back! Please enter you details</p>
         {state.errorMessage && (
           <div className={styles["login-error"]}>{state.errorMessage}</div>
         )}

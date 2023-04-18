@@ -3,8 +3,41 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+ /* .texts {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;    
+  position: absolute;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  padding: 40px;
+}
+.texts h1 {
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+
+.texts p {
+  font-size: 20px;
+}  */
+
 .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+   /* .texts h1 {
+    font-size: 25px;
+  }
+
+  .texts p {
+    font-size: 10px;
+  } */
 }
