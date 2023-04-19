@@ -37,6 +37,7 @@ const University = ({ title, lat, lon, accommodations }) => {
           return <Card
           //use index as key for now
           key={accommodation.id}
+          uni={title}
           name={accommodation.name}
           image_link={accommodation.image_link}
           num_reviews={accommodation.num_reviews}

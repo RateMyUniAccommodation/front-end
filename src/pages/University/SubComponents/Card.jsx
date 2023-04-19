@@ -1,10 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Card.module.css";
 import { StarIcon, WifiIcon, ArchiveBoxIcon, ChatBubbleLeftRightIcon } from "@heroicons/react/24/outline";
 
-const Card = ({ name, image_link, num_reviews }) => {
+const Card = ({ uni, name, image_link, num_reviews }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/accommodation/${name}`);
+  };
+
   return (
-    <div className={styles.card}>
+    <div onClick={handleClick} className={styles.card}>
       <img src={image_link} alt={name} />
       <h3>{name}</h3>
       <div className={styles.facilities}>
