@@ -3,8 +3,8 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
- /* .texts {
-  max-width: 500px;
+.texts {
+  max-width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: top;
@@ -21,7 +21,7 @@
 
 .texts p {
   font-size: 20px;
-}  */
+}
 
 .image img {
   width: 100%;
@@ -33,11 +33,15 @@
     .grid {
       grid-template-columns: 1fr;
     }
-   /* .texts h1 {
-    font-size: 25px;
-  }
+    .texts {
+      max-width: 100%;
+      padding: 20px;
+    }
+    .texts h1 {
+      font-size: 30px;
+    }
+    .texts p {
+      font-size: 15px;
+    }
 
-  .texts p {
-    font-size: 10px;
-  } */
 }
