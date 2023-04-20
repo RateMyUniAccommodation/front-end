@@ -4,7 +4,6 @@ import styles from "./University.module.css";
 import Card from "./SubComponents/Card";
 import Recenter from "./SubComponents/Recenter";
 import { getMapData } from "../../api/api";
-import { map } from "leaflet";
 
 const University = ({ title, lat, lon }) => {
   const [mapData, setMapData] = useState([]);
@@ -26,8 +25,6 @@ const University = ({ title, lat, lon }) => {
     };
     fetchMapData();
   }, [lat, lon, mapDataFetcher]);
-
-  console.log(mapData);
 
   const DEFAULT_ZOOM = 15;
   const uniCoordinates = [lat, lon];
@@ -60,9 +57,17 @@ const University = ({ title, lat, lon }) => {
         {loading && <p>Loading...</p>}
         {error && <p>Something went wrong...</p>}
         {mapData.map((uni) => {
-          const { id, name, image_url, price, review_count } = uni;
+          const { id, name, description, price, rooms, review_count } = uni.item;
           return (
-            <Card key={id} name={name} price={price} image={image_url} num_reviews={review_count} />
+            <Card
+              key={id}
+              name={name}
+              description={description}
+              price={price}
+              rooms={rooms}
+              image={uni.image_url}
+              num_reviews={review_count}
+            />
           );
         })}
       </div>
