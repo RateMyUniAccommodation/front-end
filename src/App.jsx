@@ -5,7 +5,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Error from "./pages/Error/Error";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Accomodation from "./pages/Accommodation/Accommodation";
 import University from "./pages/University/University";
