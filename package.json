@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 8080",
     "build": "vite build",
-    "serve": "vite preview --host"
-  },
+    "start": "vite preview"
+  } ,
   "dependencies": {
     "@heroicons/react": "^2.0.16",
     "embla-carousel-autoplay": "^7.1.0",
