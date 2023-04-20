@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import styles from "./University.module.css";
 import Card from "./SubComponents/Card";
 import Recenter from "./SubComponents/Recenter";
+import { getMapData } from "../../api/api";
 
-const University = ({ title, lat, lon, accommodations }) => {
+const University = ({ title, lat, lon}) => {;
+  const [mapData, setMapData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  
+  useEffect(() => {
+    const fetchMapData = async () => {
+      try {
+        const mapData = await getMapData(lat, lon);
+        setMapData(mapData);
+        setLoading(false);
+      } catch (error) {
+        setError(true);
+        setLoading(false);
+      }
+    };
+    fetchMapData();
+  }, [lat, lon]);
+
+  console.log(mapData);
+
   const DEFAULT_ZOOM = 15;
   const uniCoordinates = [lat, lon];
   return (
@@ -33,16 +54,8 @@ const University = ({ title, lat, lon, accommodations }) => {
       <div className={styles.infoContainer}>
         <h1>{title}</h1>
         <h2>Accommodations</h2>
-        {accommodations.map((accommodation) => {
-          return <Card
-          //use index as key for now
-          key={accommodation.id}
-          uni={title}
-          name={accommodation.name}
-          image_link={accommodation.image_link}
-          num_reviews={accommodation.num_reviews}
-           />;
-        })}
+        {loading && <p>Loading...</p>}
+        {error && <p>Something went wrong...</p>}
       </div>
     </div>
   );
