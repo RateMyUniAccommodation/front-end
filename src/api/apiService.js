@@ -3,7 +3,12 @@ const API_BASE_URL = 'https://goldfish-app-9nyhd.ondigitalocean.app/api';
 const apiService = {
     async get(endpoint) {
         try {
-            const response = await fetch(`${API_BASE_URL}/${endpoint}`);
+            const token = localStorage.getItem('jwt');
+            const response = await fetch(`${API_BASE_URL}/${endpoint}`, {
+                headers: {
+                    'Authorization': `${token}`,
+                },
+            });
 
             if (response.ok) {
                 const data = await response.json();
@@ -18,11 +23,17 @@ const apiService = {
     },
 
     async post(endpoint, data) {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            window.location.href = '/login'; // redirect to login page
+        }
+
         try {
             const response = await fetch(`${API_BASE_URL}/${endpoint}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    Authorization: `Bearer ${token}`,
                 },
                 body: JSON.stringify(data),
             });
@@ -39,7 +50,30 @@ const apiService = {
         }
     },
 
-    // Additional API methods (PUT, DELETE, etc.) can be added as needed
+    async delete(endpoint, id) {
+        try {
+            const token = localStorage.getItem('jwt');
+            if (!token) {
+                window.location.href = '/login'; // redirect to login page
+            }
+            const response = await fetch(`${API_BASE_URL}/${endpoint}/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Authorization': `${token}`,
+                },
+            });
+
+            if (response.ok) {
+                const responseData = await response.json();
+                return responseData;
+            } else {
+                throw new Error(`Failed to delete data from ${endpoint}`);
+            }
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    },
 };
 
 export default apiService;
