@@ -1,0 +1,15 @@
+
+  .solidStar,
+  .emptyStar{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+  }
+
+  .solidStar{
+    color: #fbbf24;;
+  }
+
+  .emptyStar{
+    color: #d1d5db;
+  }

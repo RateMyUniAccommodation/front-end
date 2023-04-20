@@ -15,19 +15,19 @@ export const fetchProfiles = async () => {
 // Review API
 
 export const getReviews = async (accomId) => {
-  const response = await api.get(`/api/review/get/${accomId}`);
+  const response = await api.get(`/review/get/${accomId}`);
   const reviews = await response;
   return reviews;
 }
 
-export const postReview = async (id, comment, rating, accomId) => {
+export const postReview = async (comment, rating, accomId) => {
   const data = {
     "comment": comment,
     "rating": rating,
     "accom_id": accomId
   }
-  const response = await api.post(`/api/review/create`, data)
-  return response["message"];
+  const response = await api.post(`/review/create`, data)
+  return response;
 }
 
 export const deleteReview = async (reviewId) => {

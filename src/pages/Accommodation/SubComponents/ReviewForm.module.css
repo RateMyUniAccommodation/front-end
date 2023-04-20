@@ -1,0 +1,46 @@
+.review-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .star-container {
+    display: flex;
+  }
+  
+  .star {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    color: #d1d5db;
+  }
+  
+  .star-filled {
+    color: #fbbf24;
+  }
+  
+  .comment-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  
+  .comment-label {
+    margin-bottom: 8px;
+  }
+  
+  .comment-input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #d1d5db;
+    resize: none
+  }
+  
+  .submit-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    background: #1c4966;
+    color: #fff;
+    border: none;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }

@@ -41,6 +41,7 @@ const University = ({ title, lat, lon, accommodations }) => {
           name={accommodation.name}
           image_link={accommodation.image_link}
           num_reviews={accommodation.num_reviews}
+          info = {accommodation}
            />;
         })}
       </div>
