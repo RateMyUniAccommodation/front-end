@@ -1,19 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import styles from "./University.module.css";
 import Card from "./SubComponents/Card";
 import Recenter from "./SubComponents/Recenter";
 import { getMapData } from "../../api/api";
+import { map } from "leaflet";
 
-const University = ({ title, lat, lon}) => {;
+const University = ({ title, lat, lon }) => {
   const [mapData, setMapData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  
+
+  const mapDataFetcher = useMemo(() => getMapData, [lat, lon]);
+
   useEffect(() => {
     const fetchMapData = async () => {
       try {
-        const mapData = await getMapData(lat, lon);
+        const mapData = await mapDataFetcher(lat, lon);
         setMapData(mapData);
         setLoading(false);
       } catch (error) {
@@ -22,14 +25,14 @@ const University = ({ title, lat, lon}) => {;
       }
     };
     fetchMapData();
-  }, [lat, lon]);
+  }, [lat, lon, mapDataFetcher]);
 
   console.log(mapData);
 
   const DEFAULT_ZOOM = 15;
   const uniCoordinates = [lat, lon];
   return (
-    <div className={styles.wrapper} >
+    <div className={styles.wrapper}>
       <div className={styles.mapContainer}>
         <MapContainer
           className={styles.map}

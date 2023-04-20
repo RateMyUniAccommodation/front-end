@@ -39,7 +39,6 @@ export const deleteReview = async (reviewId) => {
 
 export const getMapData = async (lat, lon) => {
   const response = await api.get(`/map/get/${lat}/${lon}`);
-  console.log(response)
   const mapData = await response;
   return mapData;
 }
