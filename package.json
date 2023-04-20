@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "start": "vite preview"
+    "start": "node main.jsx"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.16",
