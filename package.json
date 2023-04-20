@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --port 8080",
     "build": "vite build",
-    "start": "vite preview --port 8080"
+    "start": "vite preview --port 8080 --host"
   } ,
   "dependencies": {
     "@heroicons/react": "^2.0.16",
