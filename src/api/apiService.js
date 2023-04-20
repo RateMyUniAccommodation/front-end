@@ -3,12 +3,7 @@ const API_BASE_URL = 'https://goldfish-app-9nyhd.ondigitalocean.app/api';
 const apiService = {
     async get(endpoint) {
         try {
-            const token = localStorage.getItem('jwt');
-            const response = await fetch(`${API_BASE_URL}/${endpoint}`, {
-                headers: {
-                    'Authorization': `${token}`,
-                },
-            });
+            const response = await fetch(`${API_BASE_URL}/${endpoint}`);
 
             if (response.ok) {
                 const data = await response.json();
@@ -23,11 +18,6 @@ const apiService = {
     },
 
     async post(endpoint, data) {
-        const token = localStorage.getItem('token');
-        if (!token) {
-            window.location.href = '/login'; // redirect to login page
-        }
-
         try {
             const response = await fetch(`${API_BASE_URL}/${endpoint}`, {
                 method: 'POST',
@@ -52,10 +42,6 @@ const apiService = {
 
     async delete(endpoint, id) {
         try {
-            const token = localStorage.getItem('jwt');
-            if (!token) {
-                window.location.href = '/login'; // redirect to login page
-            }
             const response = await fetch(`${API_BASE_URL}/${endpoint}/${id}`, {
                 method: 'DELETE',
                 headers: {
