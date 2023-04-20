@@ -36,7 +36,7 @@ const ReviewForm = ({ onSubmit, accomId }) => {
       <div className={styles["comment-container"]}>
         <label htmlFor="comment" className={styles["comment-label"]}>Comment:</label>
         <textarea
-        
+          placeholder="Leave a review"
           id="comment"
           name="comment"
           value={comment}

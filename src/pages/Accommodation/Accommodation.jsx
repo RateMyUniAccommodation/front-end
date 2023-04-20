@@ -33,7 +33,7 @@ const Accommodation = ({accomInfo}) => {
   }, [data.id]);
 
   const addReview = (review) => {
-    setMyArray([...reviews, review]);
+    setReviews([...reviews, review]);
   };
 
   const handleReviewCreation = (rating, comment) => {
