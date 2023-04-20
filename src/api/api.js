@@ -15,7 +15,7 @@ export const fetchProfiles = async () => {
 // Review API
 
 export const getReviews = async (accomId) => {
-  const response = await api.get(`/review/get/${accomId}`);
+  const response = await api.get(`review/get/${accomId}`);
   const reviews = await response;
   return reviews;
 }
@@ -26,19 +26,19 @@ export const postReview = async (comment, rating, accomId) => {
     "rating": rating,
     "accom_id": accomId
   }
-  const response = await api.post(`/review/create`, data)
+  const response = await api.post(`review/create`, data)
   return response;
 }
 
 export const deleteReview = async (reviewId) => {
-  const response = await api.delete(`/api/review/${reviewId}`)
+  const response = await api.delete(`review/delete/${reviewId}`)
   return response["message"]
 }
 
 // Map API
 
 export const getMapData = async (lat, lon) => {
-  const response = await api.get(`/map/get/${lat}/${lon}`);
+  const response = await api.get(`map/get/${lat}/${lon}`);
   console.log(response)
   const mapData = await response;
   return mapData;
@@ -47,13 +47,13 @@ export const getMapData = async (lat, lon) => {
 // Auth API
 
 export const checkEmailExists = async () => {
-  const response = await api.get("/auth/checkUsername");
+  const response = await api.get("auth/checkUsername");
   const emailExists = response["status"];
   return emailExists
 }
 
 export const checkUsernameExists = async () => {
-  const response = await api.get("/auth/checkEmail");
+  const response = await api.get("auth/checkEmail");
   const usernameExists = response["status"];
   return usernameExists
 }
@@ -63,7 +63,7 @@ export const login = async (email, password) => {
     email: email,
     password: password
   }
-  const response = await api.post("/auth/login", data);
+  const response = await api.post("auth/login", data);
   if (response["token"]) {
     localStorage.setItem("jwt", response["webtoken"])
     return true
@@ -79,7 +79,7 @@ export const signup = async (email, password, username) => {
     password: password,
     username: username
   }
-  const response = await api.post("/auth/signup",);
+  const response = await api.post("auth/signup",);
   if (response["token"]) {
     localStorage.setItem("jwt", response["webtoken"])
     return true

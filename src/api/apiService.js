@@ -1,5 +1,5 @@
-const API_BASE_URL = 'https://goldfish-app-9nyhd.ondigitalocean.app/api';
-
+// const API_BASE_URL = 'https://goldfish-app-9nyhd.ondigitalocean.app/api';
+const API_BASE_URL = 'https://localhost:8000/api';
 
 const apiService = {
     async get(endpoint) {

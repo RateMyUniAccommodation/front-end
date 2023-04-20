@@ -13,7 +13,7 @@ const ReviewForm = ({ onSubmit, accomId }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //const response = await postReview(comment, rating, accomId);
+    const response = await postReview(comment, rating, accomId);
     //if success
     onSubmit( rating, comment)
     setRating(0);
