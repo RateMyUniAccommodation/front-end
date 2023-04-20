@@ -1,9 +1,14 @@
 const API_BASE_URL = 'https://goldfish-app-9nyhd.ondigitalocean.app/api';
+const token = localStorage.getItem('jwt'); // get the JWT token from local storage
 
 const apiService = {
     async get(endpoint) {
         try {
-            const response = await fetch(`${API_BASE_URL}/${endpoint}`);
+            const response = await fetch(`${API_BASE_URL}/${endpoint}`, {
+                headers: {
+                    'Authorization': token ? token : '', // use token directly as the value of Authorization header if it exists
+                },
+            });
 
             if (response.ok) {
                 const data = await response.json();
@@ -23,7 +28,7 @@ const apiService = {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    Authorization: `Bearer ${token}`,
+                    'Authorization': token ? token : '', // use token directly as the value of Authorization header if it exists
                 },
                 body: JSON.stringify(data),
             });
@@ -45,10 +50,9 @@ const apiService = {
             const response = await fetch(`${API_BASE_URL}/${endpoint}/${id}`, {
                 method: 'DELETE',
                 headers: {
-                    'Authorization': `${token}`,
+                    'Authorization': token ? token : '', // use token directly as the value of Authorization header if it exists
                 },
             });
-
             if (response.ok) {
                 const responseData = await response.json();
                 return responseData;
