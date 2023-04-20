@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Card.module.css";
 
 const Card = (props) => {
   const [imageSrc, setImageSrc] = useState(null);
 
   useEffect(() => {
-    fetch(`/src/assets/images/${props.imageName}`)
+    fetch(`${import.meta.env.BASE_URL}assets/images/${props.imageName}`)
       .then((response) => response.blob())
       .then((blob) => URL.createObjectURL(blob))
       .then((url) => setImageSrc(url))
