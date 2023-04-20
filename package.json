@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 8080",
-    "build": "vite build",
-    "start": "vite preview"
+    "build": "vite build --port 8080",
+    "start": "vite preview --port 8080"
   } ,
   "dependencies": {
     "@heroicons/react": "^2.0.16",
