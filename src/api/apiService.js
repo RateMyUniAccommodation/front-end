@@ -39,7 +39,23 @@ const apiService = {
         }
     },
 
-    // Additional API methods (PUT, DELETE, etc.) can be added as needed
+    async delete(endpoint, id) {
+        try {
+            const response = await fetch(`${API_BASE_URL}/${endpoint}/${id}`, {
+                method: 'DELETE',
+            });
+
+            if (response.ok) {
+                const responseData = await response.json();
+                return responseData;
+            } else {
+                throw new Error(`Failed to delete data from ${endpoint}`);
+            }
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    },
 };
 
 export default apiService;
