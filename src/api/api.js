@@ -72,8 +72,13 @@ export const login = async (email,password) => {
   }
 }
 
-export const register = async (email,password,username) => {
-  const response = await api.post("/auth/register",).json();
+export const signup = async (email,password,username) => {
+  const data = {
+    email: email,
+    password: password,
+    username: username
+  }
+  const response = await api.post("/auth/signup",).json();
   if(response["token"]){
     localStorage.setItem("jwt",response["webtoken"])
     return true
@@ -92,7 +97,7 @@ export default {
   checkEmailExists,
   checkUsernameExists,
   login,
-  register
+  signup
 };
 
 
