@@ -25,32 +25,24 @@
   margin-bottom: 0.5rem;
 }
 
-/* setup grid for facilities */
-.facilities {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.facility {
-  /* light grey */
-  background-color: #F3F4F6;
+/* price flexbox ot align with icon and p */
+.price {
   display: flex;
   align-items: center;
+  text-align: left;
   gap: 0.25rem;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
 }
-.facility p {
-  font-size: 0.75rem;
-  color: #4B5563;
-}
-.icon {
+.pound {
   width: 1rem;
   height: 1rem;
-  color: #4B5563;
+  color: #00d343;
 }
+.price p {
+  font-size: 1rem;
+  color: #00d343;
+}
+
+/* setup grid for facilities */
 
 .review {
   display: flex;

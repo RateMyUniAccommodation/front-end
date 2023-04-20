@@ -59,6 +59,12 @@ const University = ({ title, lat, lon }) => {
         <h2>Accommodations</h2>
         {loading && <p>Loading...</p>}
         {error && <p>Something went wrong...</p>}
+        {mapData.map((uni) => {
+          const { id, name, image_url, price, review_count } = uni;
+          return (
+            <Card key={id} name={name} price={price} image={image_url} num_reviews={review_count} />
+          );
+        })}
       </div>
     </div>
   );
