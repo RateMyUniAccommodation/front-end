@@ -1,4 +1,4 @@
-const API_BASE_URL = 'localhost:8000/api';
+const API_BASE_URL = "goldfish-app-9nyhd.ondigitalocean.app/api";
 
 const apiService = {
     async get(endpoint) {
