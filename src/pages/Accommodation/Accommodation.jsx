@@ -27,6 +27,8 @@ const Accommodation = ({ accomInfo }) => {
     fetchReviews();
   }, [data.id]);
 
+  console.log(data);
+
   return (
     <div className={styles.accomGrid}>
       <h1>{data.name}</h1>
