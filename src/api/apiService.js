@@ -1,12 +1,12 @@
 const API_BASE_URL = 'https://goldfish-app-9nyhd.ondigitalocean.app/api';
+const token = localStorage.getItem('jwt'); // get the JWT token from local storage
 
 const apiService = {
     async get(endpoint) {
         try {
-            const token = localStorage.getItem('jwt');
             const response = await fetch(`${API_BASE_URL}/${endpoint}`, {
                 headers: {
-                    'Authorization': `${token}`,
+                    'Authorization': token ? token : '', // use token directly as the value of Authorization header if it exists
                 },
             });
 
@@ -23,17 +23,12 @@ const apiService = {
     },
 
     async post(endpoint, data) {
-        const token = localStorage.getItem('token');
-        if (!token) {
-            window.location.href = '/login'; // redirect to login page
-        }
-
         try {
             const response = await fetch(`${API_BASE_URL}/${endpoint}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    Authorization: `Bearer ${token}`,
+                    'Authorization': token ? token : '', // use token directly as the value of Authorization header if it exists
                 },
                 body: JSON.stringify(data),
             });
@@ -52,17 +47,12 @@ const apiService = {
 
     async delete(endpoint, id) {
         try {
-            const token = localStorage.getItem('jwt');
-            if (!token) {
-                window.location.href = '/login'; // redirect to login page
-            }
             const response = await fetch(`${API_BASE_URL}/${endpoint}/${id}`, {
                 method: 'DELETE',
                 headers: {
-                    'Authorization': `${token}`,
+                    'Authorization': token ? token : '', // use token directly as the value of Authorization header if it exists
                 },
             });
-
             if (response.ok) {
                 const responseData = await response.json();
                 return responseData;

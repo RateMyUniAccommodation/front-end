@@ -67,7 +67,8 @@ const University = ({ title, lat, lon }) => {
               rooms={rooms}
               image={uni.image_url}
               num_reviews={review_count}
-            />
+              info = {uni}
+           />
           );
         })}
       </div>

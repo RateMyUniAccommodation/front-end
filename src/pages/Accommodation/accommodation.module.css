@@ -1,0 +1,41 @@
+
+/* grid 1fr 2fr */
+
+.accomGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;  
+  width: 100%;
+}
+.accomGrid h1 {
+  text-align: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.accomGrid h2 {
+  text-align: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.reviewGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto ;
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* reviewgrid only one per row for mobile */
+@media (max-width: 768px) {
+  .reviewGrid {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
