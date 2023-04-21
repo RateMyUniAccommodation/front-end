@@ -1,0 +1,19 @@
+.card{
+    padding: 10px;
+    margin-block: 30px;
+    box-shadow: 2px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.date{
+    text-align: right;
+    font-size: small;
+    color: grey;
+}
+
+.header{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center
+}
