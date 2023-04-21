@@ -1,15 +1,19 @@
-
-  .solidStar,
-  .emptyStar{
-    display: inline-block;
-    width: 15px;
-    height: 15px;
+.starsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 6rem;
+    height: 1rem;
+}
+.solidStar{
+    color: #fbbf24;
+    width: 1rem;
+    height: 1rem;
   }
 
-  .solidStar{
-    color: #fbbf24;;
-  }
-
-  .emptyStar{
+.emptyStar{
     color: #d1d5db;
-  }
+    width: 1rem;
+    height: 1rem;
+}
