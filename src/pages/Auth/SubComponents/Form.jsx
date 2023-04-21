@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 import styles from "./Form.module.css";
+import { login } from "../../../api/api"
 
 const initialState = {
   email: "",
@@ -59,21 +60,29 @@ const Form = () => {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     dispatch({ type: "LOGIN_REQUEST" });
-
-    // Simulate API request
-    setTimeout(() => {
-      if (state.email === "test@test.com" && state.password === "password") {
+    
+    try {
+      // Call the login API function
+      const response = await login(state.email, state.password);
+      if (response.status === 200) {
         dispatch({ type: "LOGIN_SUCCESS" });
+        console.log("Login successful" + response.data)
+        // Redirect to the dashboard or some other page
       } else {
         dispatch({
           type: "LOGIN_FAILURE",
           payload: { errorMessage: "Invalid email or password" },
         });
       }
-    }, 2000);
+    } catch (error) {
+      dispatch({
+        type: "LOGIN_FAILURE",
+        payload: { errorMessage: "Something went wrong. Please try again." },
+      });
+    }
   };
 
   return (

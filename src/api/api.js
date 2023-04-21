@@ -68,7 +68,7 @@ export const login = async (email, password) => {
     return true
   }
   else {
-    return response["message"]
+    return response
   }
 }
 
@@ -84,7 +84,7 @@ export const signup = async (email, password, username) => {
     return true
   }
   else {
-    return response["message"]
+    return response
   }
 }
 

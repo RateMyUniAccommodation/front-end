@@ -32,7 +32,7 @@ const apiService = {
                 },
                 body: JSON.stringify(data),
             });
-
+            console.log(response.headers);
             if (response.ok) {
                 const responseData = await response.json();
                 return responseData;
