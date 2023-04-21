@@ -5,6 +5,7 @@ import { getReviews } from "../../api/api";
 import ReviewCard from "./SubComponents/ReviewCard";
 
 const Accommodation = ({ accomInfo }) => {
+  console.log(accomInfo);
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
