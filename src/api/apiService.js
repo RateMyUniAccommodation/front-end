@@ -1,4 +1,5 @@
-const API_BASE_URL = 'https://goldfish-app-9nyhd.ondigitalocean.app/api';
+// const API_BASE_URL = 'https://api.ratemyuniaccom.tech/api';
+const API_BASE_URL = 'http://localhost:8000/api';
 const token = localStorage.getItem('jwt'); // get the JWT token from local storage
 
 const apiService = {
@@ -26,16 +27,14 @@ const apiService = {
         try {
             const response = await fetch(`${API_BASE_URL}/${endpoint}`, {
                 method: 'POST',
+                body: JSON.stringify(data),
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': token ? token : '', // use token directly as the value of Authorization header if it exists
-                },
-                body: JSON.stringify(data),
+                }
             });
-            console.log(response.headers);
             if (response.ok) {
-                const responseData = await response.json();
-                return responseData;
+                return response;
             } else {
                 throw new Error(`Failed to post data to ${endpoint}`);
             }

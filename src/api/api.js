@@ -63,12 +63,11 @@ export const login = async (email, password) => {
     password: password
   }
   const response = await api.post("auth/login", data);
-  if (response["token"]) {
-    localStorage.setItem("jwt", response["webtoken"])
-    return true
+  if (setToken(response)) {
+    return response;
   }
   else {
-    return response
+    return false
   }
 }
 
@@ -78,14 +77,22 @@ export const signup = async (email, password, username) => {
     password: password,
     username: username
   }
-  const response = await api.post("auth/signup",);
-  if (response["token"]) {
-    localStorage.setItem("jwt", response["webtoken"])
-    return true
+  const response = await api.post("auth/signup", data);
+  if (setToken(response)) {
+    return response;
   }
   else {
-    return response
+    return false
   }
+}
+
+async function setToken(response){
+  const data = await response.json();
+  if (data["token"]) {
+    sessionStorage.setItem("jwt", data["token"])
+    return true;
+  }
+  return false;
 }
 
 export default {

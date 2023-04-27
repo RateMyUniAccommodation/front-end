@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import {useNavigate} from "react-router-dom";
 import styles from "./Form.module.css";
 import { login } from "../../../api/api"
 
@@ -46,6 +47,8 @@ const reducer = (state, action) => {
 const Form = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const navigate = useNavigate();
+
   const handleEmailChange = (event) => {
     dispatch({
       type: "SET_EMAIL",
@@ -69,8 +72,7 @@ const Form = () => {
       const response = await login(state.email, state.password);
       if (response.status === 200) {
         dispatch({ type: "LOGIN_SUCCESS" });
-        console.log("Login successful" + response.data)
-        // Redirect to the dashboard or some other page
+        navigate("/home")
       } else {
         dispatch({
           type: "LOGIN_FAILURE",
