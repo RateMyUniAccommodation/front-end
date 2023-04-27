@@ -1,5 +1,4 @@
-// const API_BASE_URL = 'https://api.ratemyuniaccom.tech/api';
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'https://api.ratemyuniaccom.tech/api';
 const token = localStorage.getItem('jwt'); // get the JWT token from local storage
 
 const apiService = {
