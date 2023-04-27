@@ -1,5 +1,7 @@
 import React, { useReducer } from "react";
+import {useNavigate} from "react-router-dom";
 import styles from "./Form.module.css";
+import { login } from "../../../api/api"
 
 const initialState = {
   email: "",
@@ -45,6 +47,8 @@ const reducer = (state, action) => {
 const Form = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const navigate = useNavigate();
+
   const handleEmailChange = (event) => {
     dispatch({
       type: "SET_EMAIL",
@@ -59,21 +63,28 @@ const Form = () => {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     dispatch({ type: "LOGIN_REQUEST" });
-
-    // Simulate API request
-    setTimeout(() => {
-      if (state.email === "test@test.com" && state.password === "password") {
+    
+    try {
+      // Call the login API function
+      const response = await login(state.email, state.password);
+      if (response.status === 200) {
         dispatch({ type: "LOGIN_SUCCESS" });
+        navigate("/home")
       } else {
         dispatch({
           type: "LOGIN_FAILURE",
           payload: { errorMessage: "Invalid email or password" },
         });
       }
-    }, 2000);
+    } catch (error) {
+      dispatch({
+        type: "LOGIN_FAILURE",
+        payload: { errorMessage: "Something went wrong. Please try again." },
+      });
+    }
   };
 
   return (
